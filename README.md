@@ -14,6 +14,8 @@ Konsitenz: Das Design soll einheitlich sein und man soll sich auskennen.
 
 Klar/Simple: Der User soll sich sofort auskennen, wo er ist und was er machen kann
 
-Modular/Atomic Design: Design besteht aus Filmkarten/Komponten
+Modular/Atomic Design: Design besteht aus Filmkarten/Komponten/Buttons/Navigation ..., Es wird SCSS verwendet mit mehreren Files und Normalize
 
-Klare Farb/Schriftauswahl: Definition der Farben (zwecks Branding)
+Klare Farb/Schriftauswahl: Definition der Farben mit Hex-Werten 
+
+Feeling/Emotions: Was ist das Grundsätzliche Feeling der Website?
