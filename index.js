@@ -29,6 +29,21 @@ Array.from(allLinks).forEach((link) => {
     if (pathName === '/repository/FilmRack_Styleguide/einleitung') {
         const content = `
             <h1> Einleitung </h1>
+            <h2> MovieNights </h2>
+            <p>Dieser Styleguide stellt die Grundlage für die Website <a href="#"> MovieNights </a> dar. MovieNights ist eine Plattform auf der Filmliebhaber gemeinsam mit ihren Freunden Filmabende organisieren können. </p>
+            <h2> Ziele des Styleguides </h2>
+            <ul>
+                <li>konsitentes Design</li>
+                <li>konsistentes und skalierbares CSS</li>
+                <li>schneller und effizienter Einsatz von UI-Komponenten</li>
+            </ul>
+            <h2>Bereiche des Styleguides</h2>
+            <h3>Brand Guide</h3>
+            <p> Beschreibt Richtlinien bezüglich der Typographie und der Farbgestaltung. </p>
+            <h3>CSS-Methodologie</h3>
+            <p> Beschreibt wie wir CSS modular, wiederverwendbar und skalierbar gestaltet werden kann. </p>
+            <h3>Component Library</h3>
+            <p> Zeigt verschiedenste UI-Komponenten mit Code-Beispielen, Visueller Darstellung und Erläuterung der Anwendung  </p>
         `
         
         pageContent.innerHTML = content
