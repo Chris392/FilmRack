@@ -84,6 +84,19 @@ Array.from(allLinks).forEach((link) => {
             <p>Beinhaltet Styles für footer/header oder Navigation</p>
             <h3>utils</h3>
             <p>Beinhaltet alle sass variablen und somit auch vordefinierte Farben/Schriften etc.</p>
+
+            <h2>Reset.css</h2>
+            <p> Wir verwenden ein Reset CSS von https://meyerweb.com/eric/tools/css/reset/</p>
+            <p> Das Reset.css dient dazu, einige vordefinierten Styles der verschiedenen Browser zurückzusetzten,
+            um so universalität zu erreichen und selbstständig styles erstellen zu können.</p>
+
+            <h2>box-sizing: border-box</h2>
+            <p>Wir verwenden box-sizing: border-box, damit werden bei der Breite und bei der Höhe der Elemente
+            die paddings/margins/borders mit berücksichtigt. Das kann das Styling sehr erleichtern.</p>
+
+            <h2>SASS</h2>
+            <p>Wir verwenden Sass aufgrund der vielen Vorteile, die Sass bietet. Vorteile sind vor allem
+            das erstellen von Variablen und das Verschachteln von Selektoren.</p>
         `
         
         pageContent.innerHTML = content

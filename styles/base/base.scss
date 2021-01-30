@@ -1,4 +1,8 @@
-body{
+*, *:after, *:before {
+    box-sizing: border-box;
+  }
+
+ody{
     display: flex;
     color: white;
     font-family: Helvetica;

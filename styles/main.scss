@@ -1,4 +1,5 @@
-@import 'base/reset.scss', 'utils/variables.scss', 'layout/sidebar.scss';
+@import 'utils/variables.scss', 'base/reset.scss', 'base/base.scss', 'base/typography.scss', 'layout/sidebar.scss', 'layout/content.scss';
+
 
 body{
     display: flex;
