@@ -68,9 +68,9 @@ Array.from(allLinks).forEach((link) => {
 
 
     
-    if (pathName === '/repository/FilmRack_Styleguide/listen') {
+    if (pathName === '/repository/FilmRack_Styleguide/navigation') {
         const content = `
-            <h1> Listen </h1>
+            <h1> Navigation </h1>
         `
         
         pageContent.innerHTML = content
