@@ -11,8 +11,17 @@ a{
 }
 
 h1{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+h2{
     color: $akzent;
     font-size: 2rem;
+}
+
+h3{
+    font-weight: bold;
 }
 
 #side_nav{
@@ -21,7 +30,7 @@ h1{
     width: 20%;
     background-color: black;
 
-    h2{
+    h4{
         padding-bottom: 5px;
         padding-top: 15px;
     }
@@ -32,8 +41,18 @@ h1{
 }
 
 #content{
+    padding: 15px;
     height: 100vh;
     width: 80%;
     background-color: $base-color;
+
+    h2{
+        margin-top: 15px;
+        margin-bottom: 5px;
+    }
+    h3{
+        margin-top: 15px;
+        margin-bottom: 5px;
+    }
 }
 
