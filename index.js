@@ -52,7 +52,7 @@ Array.from(allLinks).forEach((link) => {
 
 
 
-    if (pathName === '/repository/FilmRack_Styleguide/farben') {
+    else if (pathName === '/repository/FilmRack_Styleguide/farben') {
         const content = `
             <h1> Farben </h1>
         `
@@ -62,17 +62,44 @@ Array.from(allLinks).forEach((link) => {
     }
 
 
-    if (pathName === '/repository/FilmRack_Styleguide/methodologie-Einleitung') {
+    else if (pathName === '/repository/FilmRack_Styleguide/code') {
         const content = `
-            <h1> Methodolgie </h1>
+            <h1> Code-Konventionen </h1>
+
+            <h2> Datei Struktur </h2>
+            <p> Die Dateistruktur orientiert sich an dem 7-1 Pattern.
+            Das bedeutet wir haben eine main.scss Datei, welche 
+            mehrere andere scss-Datein importiert, welche sich
+            in verschiedenen Ordnern befinden. </p>
+
+            <p>Da MovieNights ein eher kleineres Projekt ist, müssen
+            nicht alle 7 Folder exakt übernommen werden.
+            Nicht verzichtet wird jedoch auf folgende Ordner: </p>
+
+            <h3>base</h3>
+            <p>Beinhaltet styles, die für das gesamte Projekt gelten (zB reset.scss, typography.scss)</p>
+            <h3>components</h3>
+            <p>Beinhaltet Stylesheets für die einzelnen Komponenten</p>
+            <h3>layout</h3>
+            <p>Beinhaltet Styles für footer/header oder Navigation</p>
+            <h3>utils</h3>
+            <p>Beinhaltet alle sass variablen und somit auch vordefinierte Farben/Schriften etc.</p>
         `
         
         pageContent.innerHTML = content
         console.log(pageContent)
     }
 
+    else if (pathName === '/repository/FilmRack_Styleguide/naming') {
+        const content = `
+            <h1> Naming Conventions </h1>
+        `
+        
+        pageContent.innerHTML = content
+        console.log(pageContent)
+    }
 
-    if (pathName === '/repository/FilmRack_Styleguide/ueberschriften') {
+    else if (pathName === '/repository/FilmRack_Styleguide/ueberschriften') {
         const content = `
             <h1> Überschriften </h1>
         `
@@ -82,8 +109,7 @@ Array.from(allLinks).forEach((link) => {
     }
 
 
-    
-    if (pathName === '/repository/FilmRack_Styleguide/navigation') {
+    else if (pathName === '/repository/FilmRack_Styleguide/navigation') {
         const content = `
             <h1> Navigation </h1>
         `
@@ -92,7 +118,7 @@ Array.from(allLinks).forEach((link) => {
         console.log(pageContent)
     }
 
-    if (pathName === '/repository/FilmRack_Styleguide/links') {
+    else if (pathName === '/repository/FilmRack_Styleguide/links') {
         const content = `
             <h1> Links </h1>
         `
@@ -102,7 +128,7 @@ Array.from(allLinks).forEach((link) => {
     }
 
 
-    if (pathName === '/repository/FilmRack_Styleguide/buttons') {
+    else if (pathName === '/repository/FilmRack_Styleguide/buttons') {
         const content = `
             <h1> Buttons </h1>
         `
@@ -112,7 +138,7 @@ Array.from(allLinks).forEach((link) => {
     }
 
 
-    if (pathName === '/repository/FilmRack_Styleguide/movie-Cards') {
+    else if (pathName === '/repository/FilmRack_Styleguide/movie-Cards') {
         const content = `
             <h1> Movie Cards </h1>
         `
