@@ -52,7 +52,7 @@ Array.from(allLinks).forEach((link) => {
 
 
 
-    if (pathName === '/repository/FilmRack_Styleguide/farben') {
+    else if (pathName === '/repository/FilmRack_Styleguide/farben') {
         const content = `
             <h1> Farben </h1>
         `
@@ -62,17 +62,57 @@ Array.from(allLinks).forEach((link) => {
     }
 
 
-    if (pathName === '/repository/FilmRack_Styleguide/methodologie-Einleitung') {
+    else if (pathName === '/repository/FilmRack_Styleguide/code') {
         const content = `
-            <h1> Methodolgie </h1>
+            <h1> Code-Konventionen </h1>
+
+            <h2> Datei Struktur </h2>
+            <p> Die Dateistruktur orientiert sich an dem 7-1 Pattern.
+            Das bedeutet wir haben eine main.scss Datei, welche 
+            mehrere andere scss-Datein importiert, welche sich
+            in verschiedenen Ordnern befinden. </p>
+
+            <p>Da MovieNights ein eher kleineres Projekt ist, müssen
+            nicht alle 7 Folder exakt übernommen werden.
+            Nicht verzichtet wird jedoch auf folgende Ordner: </p>
+
+            <h3>base</h3>
+            <p>Beinhaltet styles, die für das gesamte Projekt gelten (zB reset.scss, typography.scss)</p>
+            <h3>components</h3>
+            <p>Beinhaltet Stylesheets für die einzelnen Komponenten</p>
+            <h3>layout</h3>
+            <p>Beinhaltet Styles für footer/header oder Navigation</p>
+            <h3>utils</h3>
+            <p>Beinhaltet alle sass variablen und somit auch vordefinierte Farben/Schriften etc.</p>
+
+            <h2>Reset.css</h2>
+            <p> Wir verwenden ein Reset CSS von https://meyerweb.com/eric/tools/css/reset/</p>
+            <p> Das Reset.css dient dazu, einige vordefinierten Styles der verschiedenen Browser zurückzusetzten,
+            um so universalität zu erreichen und selbstständig styles erstellen zu können.</p>
+
+            <h2>box-sizing: border-box</h2>
+            <p>Wir verwenden box-sizing: border-box, damit werden bei der Breite und bei der Höhe der Elemente
+            die paddings/margins/borders mit berücksichtigt. Das kann das Styling sehr erleichtern.</p>
+
+            <h2>SASS</h2>
+            <p>Wir verwenden Sass aufgrund der vielen Vorteile, die Sass bietet. Vorteile sind vor allem
+            das erstellen von Variablen und das Verschachteln von Selektoren.</p>
         `
         
         pageContent.innerHTML = content
         console.log(pageContent)
     }
 
+    else if (pathName === '/repository/FilmRack_Styleguide/naming') {
+        const content = `
+            <h1> Naming Conventions </h1>
+        `
+        
+        pageContent.innerHTML = content
+        console.log(pageContent)
+    }
 
-    if (pathName === '/repository/FilmRack_Styleguide/ueberschriften') {
+    else if (pathName === '/repository/FilmRack_Styleguide/ueberschriften') {
         const content = `
             <h1> Überschriften </h1>
         `
@@ -82,8 +122,7 @@ Array.from(allLinks).forEach((link) => {
     }
 
 
-    
-    if (pathName === '/repository/FilmRack_Styleguide/navigation') {
+    else if (pathName === '/repository/FilmRack_Styleguide/navigation') {
         const content = `
             <h1> Navigation </h1>
         `
@@ -92,7 +131,7 @@ Array.from(allLinks).forEach((link) => {
         console.log(pageContent)
     }
 
-    if (pathName === '/repository/FilmRack_Styleguide/links') {
+    else if (pathName === '/repository/FilmRack_Styleguide/links') {
         const content = `
             <h1> Links </h1>
         `
@@ -102,7 +141,7 @@ Array.from(allLinks).forEach((link) => {
     }
 
 
-    if (pathName === '/repository/FilmRack_Styleguide/buttons') {
+    else if (pathName === '/repository/FilmRack_Styleguide/buttons') {
         const content = `
             <h1> Buttons </h1>
         `
@@ -112,7 +151,7 @@ Array.from(allLinks).forEach((link) => {
     }
 
 
-    if (pathName === '/repository/FilmRack_Styleguide/movie-Cards') {
+    else if (pathName === '/repository/FilmRack_Styleguide/movie-Cards') {
         const content = `
             <h1> Movie Cards </h1>
         `
