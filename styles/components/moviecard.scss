@@ -1,9 +1,11 @@
 .container{
     margin-top: 20px;
-    width: 850px;
+    width: 450px;
 }
 
 .moviecard{
+
+    margin-bottom: 100px;
 
     &__background{
     background-color: $dark-grey;
@@ -19,6 +21,7 @@
         width: 100%;
         border-top-left-radius: 5px;
         border-top-right-radius: 5px;
+        cursor: pointer;
     }
 
     &__content{
@@ -27,8 +30,7 @@
     }
 
     &__time{
-        position: absolute;
-        right: 10px;
+        text-align: end;
     }
 
     &__title{
@@ -41,20 +43,41 @@
 
     &__short_description{
         line-height: 1.5;
+
+        &--invisible{
+            display: none;
+        }
+
+        &--visible{
+            display: block;
+        }
     }
 
     &__long_description{
-        display: none;
         line-height: 1.5;   
     }
 
-    &__directors{
-        display: none;
+    &__extended{
+        overflow: hidden;
+
+        &--invisible{
+            transition: max-height 0.3s;
+            max-height: 0px;
+            visibility: hidden;
+        }
+        
+
+        &--visible{
+            max-height: 500px;
+            transition: max-height 0.5s;
+        }
     }
 
-    &__actors{
-        display: none;
+    &__directors{
+        line-height: 5;
     }
+
+
 
     &__folder{
         margin-top: 35px;
@@ -65,14 +88,7 @@
         border-width: 0.5px;
         border-end-start-radius: 5px;
         border-end-end-radius: 5px;
-
-        &__upfolded{
-
-        }
-
-        &__downfolded{
-            
-        }
+        cursor: pointer;
     }
 
 

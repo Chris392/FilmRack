@@ -192,23 +192,107 @@ Array.from(allLinks).forEach((link) => {
     else if (pathName === '/movie-Cards') {
         const content = `
             <h1> Movie Cards </h1>
+
+            <div class="container">
+            <div class="moviecard">
+                <h3 class="moviecard__rank">Platz 6</h3>
+                <div class="moviecard__background">
+                    <img class="moviecard__media" src="images/Jumpstreet.PNG" alt="Movie">
+                    <div class="moviecard__content">
+                        <p class="moviecard__time">1 Std. 49 Min.</p>
+                        <h1 class="moviecard__title">21 Jumpstreet</h1>
+                        <p class="moviecard__data">2012 FSK-12 Action-Comedy-Crime</p>
+                        <p class="moviecard__short_description moviecard__shortdescription--visible">A pair of underachieving cops are sent back to a local high school
+                        to blend in. </p> 
+                        <div class="moviecard__extended moviecard__extended--invisible">
+                            <p class="moviecard__long_description">A pair of underachieving cops are sent back to a 
+                            local high school to blend in and bring down a synthetic drug ring. 
+                            The pair plays police officers who must go undercover in a high school to bust a drug ring, just like Johnny Depp in the original series.
+                            <p class="moviecard__directors">Directors: Phil Lord, Christopher Miller</p>
+                            <p class="moviecard__actors">Actors: Jonah Hill, Channing Tatum, Brie Larson </p>
+                        </div>
+                    </div>
+                    <div class="moviecard__folder moviecard__folder--upfolded">AUSKLAPPEN</div>
+                </div>
+            </div>
+    
+    
+            <div class="moviecard">
+                <h3 class="moviecard__rank">Platz 6</h3>
+                <div class="moviecard__background">
+                    <img class="moviecard__media" src="images/Jumpstreet.PNG" alt="Movie">
+                    <div class="moviecard__content">
+                        <p class="moviecard__time">1 Std. 49 Min.</p>
+                        <h1 class="moviecard__title">21 Jumpstreet</h1>
+                        <p class="moviecard__data">2012 FSK-12 Action-Comedy-Crime</p>
+                        <p class="moviecard__short_description moviecard__shortdescription--visible">A pair of underachieving cops are sent back to a local high school
+                        to blend in. </p> 
+                        <div class="moviecard__extended moviecard__extended--invisible">
+                            <p class="moviecard__long_description">A pair of underachieving cops are sent back to a 
+                            local high school to blend in and bring down a synthetic drug ring. 
+                            The pair plays police officers who must go undercover in a high school to bust a drug ring, just like Johnny Depp in the original series.
+                            <p class="moviecard__directors">Directors: Phil Lord, Christopher Miller</p>
+                            <p class="moviecard__actors">Actors: Jonah Hill, Channing Tatum, Brie Larson </p>
+                        </div>
+                    </div>
+                    <div class="moviecard__folder moviecard__folder--upfolded">AUSKLAPPEN</div>
+                </div>
+            </div>
+        </div>
         `
         
         pageContent.innerHTML = content
         console.log(pageContent)
+
+        cardAnimation()
     }
   }
 
-  
+ 
+function cardAnimation(){
 
 //Script for the movie-card
 
-const card = document.getElementsByClassName('moviecard__folder');
+const card = document.getElementsByClassName('moviecard__folder')
+const shortDescription = document.getElementsByClassName('moviecard__short_description')
+const extended = document.getElementsByClassName('moviecard__extended')
+const actors = document.getElementsByClassName('moviecard__actors')
 
-for (let i = 0; i < 3; i++){
+console.log(shortDescription)
+
+for (let i = 0; i < card.length; i++){
     let count = i;
-    card[i].addEventListener("click", () => {
-        console.log(count)
+    card[count].addEventListener("click", () => {
+
+        if(card[count].innerHTML === "AUSKLAPPEN"){
+        
+        shortDescription[count].classList.remove("moviecard__short_description--visible")
+        shortDescription[count].classList.add("moviecard__short_description--invisible")
+
+        extended[count].classList.remove("moviecard__extended--invisible")
+        extended[count].classList.add("moviecard__extended--visible")
+
+        actors[count].style.display = "block"
+
+        card[count].innerHTML = "EINKLAPPEN"
+
+        }else{
+
+        shortDescription[count].classList.add("moviecard__short_description--visible")
+        shortDescription[count].classList.remove("moviecard__short_description--invisible")
+
+        extended[count].classList.add("moviecard__extended--invisible")
+        extended[count].classList.remove("moviecard__extended--visible")
+
+        card[count].innerHTML = "AUSKLAPPEN"
+
+        actors[count].style.display = "none"
+
+        }
+        
+        
     })
+
+}
 
 }

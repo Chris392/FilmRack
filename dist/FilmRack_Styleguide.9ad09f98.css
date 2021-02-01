@@ -125,9 +125,12 @@ p {
 
 .container {
   margin-top: 20px;
-  width: 850px;
+  width: 450px;
 }
 
+.moviecard {
+  margin-bottom: 100px;
+}
 .moviecard__background {
   background-color: #333333;
   border-radius: 5px;
@@ -140,14 +143,14 @@ p {
   width: 100%;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
+  cursor: pointer;
 }
 .moviecard__content {
   padding-right: 15px;
   padding-left: 15px;
 }
 .moviecard__time {
-  position: absolute;
-  right: 10px;
+  text-align: end;
 }
 .moviecard__title {
   line-height: 1.5;
@@ -158,15 +161,29 @@ p {
 .moviecard__short_description {
   line-height: 1.5;
 }
-.moviecard__long_description {
+.moviecard__short_description--invisible {
   display: none;
+}
+.moviecard__short_description--visible {
+  display: block;
+}
+.moviecard__long_description {
   line-height: 1.5;
 }
-.moviecard__directors {
-  display: none;
+.moviecard__extended {
+  overflow: hidden;
 }
-.moviecard__actors {
-  display: none;
+.moviecard__extended--invisible {
+  transition: max-height 0.3s;
+  max-height: 0px;
+  visibility: hidden;
+}
+.moviecard__extended--visible {
+  max-height: 500px;
+  transition: max-height 0.5s;
+}
+.moviecard__directors {
+  line-height: 5;
 }
 .moviecard__folder {
   margin-top: 35px;
@@ -177,7 +194,9 @@ p {
   border-width: 0.5px;
   border-end-start-radius: 5px;
   border-end-end-radius: 5px;
+  cursor: pointer;
 }
+
 body {
   display: flex;
   color: white;

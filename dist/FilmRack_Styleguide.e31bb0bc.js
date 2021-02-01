@@ -180,24 +180,45 @@ var onRouteChange = function onRouteChange() {
     pageContent.innerHTML = _content8;
     console.log(pageContent);
   } else if (pathName === '/movie-Cards') {
-    var _content9 = "\n            <h1> Movie Cards </h1>\n        ";
+    var _content9 = "\n            <h1> Movie Cards </h1>\n\n            <div class=\"container\">\n            <div class=\"moviecard\">\n                <h3 class=\"moviecard__rank\">Platz 6</h3>\n                <div class=\"moviecard__background\">\n                    <img class=\"moviecard__media\" src=\"images/Jumpstreet.PNG\" alt=\"Movie\">\n                    <div class=\"moviecard__content\">\n                        <p class=\"moviecard__time\">1 Std. 49 Min.</p>\n                        <h1 class=\"moviecard__title\">21 Jumpstreet</h1>\n                        <p class=\"moviecard__data\">2012 FSK-12 Action-Comedy-Crime</p>\n                        <p class=\"moviecard__short_description moviecard__shortdescription--visible\">A pair of underachieving cops are sent back to a local high school\n                        to blend in. </p> \n                        <div class=\"moviecard__extended moviecard__extended--invisible\">\n                            <p class=\"moviecard__long_description\">A pair of underachieving cops are sent back to a \n                            local high school to blend in and bring down a synthetic drug ring. \n                            The pair plays police officers who must go undercover in a high school to bust a drug ring, just like Johnny Depp in the original series.\n                            <p class=\"moviecard__directors\">Directors: Phil Lord, Christopher Miller</p>\n                            <p class=\"moviecard__actors\">Actors: Jonah Hill, Channing Tatum, Brie Larson </p>\n                        </div>\n                    </div>\n                    <div class=\"moviecard__folder moviecard__folder--upfolded\">AUSKLAPPEN</div>\n                </div>\n            </div>\n    \n    \n            <div class=\"moviecard\">\n                <h3 class=\"moviecard__rank\">Platz 6</h3>\n                <div class=\"moviecard__background\">\n                    <img class=\"moviecard__media\" src=\"images/Jumpstreet.PNG\" alt=\"Movie\">\n                    <div class=\"moviecard__content\">\n                        <p class=\"moviecard__time\">1 Std. 49 Min.</p>\n                        <h1 class=\"moviecard__title\">21 Jumpstreet</h1>\n                        <p class=\"moviecard__data\">2012 FSK-12 Action-Comedy-Crime</p>\n                        <p class=\"moviecard__short_description moviecard__shortdescription--visible\">A pair of underachieving cops are sent back to a local high school\n                        to blend in. </p> \n                        <div class=\"moviecard__extended moviecard__extended--invisible\">\n                            <p class=\"moviecard__long_description\">A pair of underachieving cops are sent back to a \n                            local high school to blend in and bring down a synthetic drug ring. \n                            The pair plays police officers who must go undercover in a high school to bust a drug ring, just like Johnny Depp in the original series.\n                            <p class=\"moviecard__directors\">Directors: Phil Lord, Christopher Miller</p>\n                            <p class=\"moviecard__actors\">Actors: Jonah Hill, Channing Tatum, Brie Larson </p>\n                        </div>\n                    </div>\n                    <div class=\"moviecard__folder moviecard__folder--upfolded\">AUSKLAPPEN</div>\n                </div>\n            </div>\n        </div>\n        ";
     pageContent.innerHTML = _content9;
     console.log(pageContent);
+    cardAnimation();
   }
-}; //Script for the movie-card
-
-
-var card = document.getElementsByClassName('moviecard__folder');
-
-var _loop = function _loop(i) {
-  var count = i;
-  card[i].addEventListener("click", function () {
-    console.log(count);
-  });
 };
 
-for (var i = 0; i < 3; i++) {
-  _loop(i);
+function cardAnimation() {
+  //Script for the movie-card
+  var card = document.getElementsByClassName('moviecard__folder');
+  var shortDescription = document.getElementsByClassName('moviecard__short_description');
+  var extended = document.getElementsByClassName('moviecard__extended');
+  var actors = document.getElementsByClassName('moviecard__actors');
+  console.log(shortDescription);
+
+  var _loop = function _loop(i) {
+    var count = i;
+    card[count].addEventListener("click", function () {
+      if (card[count].innerHTML === "AUSKLAPPEN") {
+        shortDescription[count].classList.remove("moviecard__short_description--visible");
+        shortDescription[count].classList.add("moviecard__short_description--invisible");
+        extended[count].classList.remove("moviecard__extended--invisible");
+        extended[count].classList.add("moviecard__extended--visible");
+        actors[count].style.display = "block";
+        card[count].innerHTML = "EINKLAPPEN";
+      } else {
+        shortDescription[count].classList.add("moviecard__short_description--visible");
+        shortDescription[count].classList.remove("moviecard__short_description--invisible");
+        extended[count].classList.add("moviecard__extended--invisible");
+        extended[count].classList.remove("moviecard__extended--visible");
+        card[count].innerHTML = "AUSKLAPPEN";
+        actors[count].style.display = "none";
+      }
+    });
+  };
+
+  for (var i = 0; i < card.length; i++) {
+    _loop(i);
+  }
 }
 },{}],"../../../../../home/christoph/.config/yarn/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -227,7 +248,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "33233" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "42651" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
