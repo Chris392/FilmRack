@@ -5,13 +5,20 @@ a{
 h1{
     font-size: 2rem;
     font-weight: bold;
+    font-family: $heading-font;
 }
 
 h2{
     color: $akzent;
     font-size: 2rem;
+    font-family: $heading-font;
 }
 
 h3{
     font-weight: bold;
+    font-family: $heading-font;
+}
+
+.brand{
+    font-family: $brand-font;
 }
