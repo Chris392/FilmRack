@@ -15,10 +15,19 @@ h2{
 }
 
 h3{
+    color: $akzent;
     font-weight: bold;
     font-family: $heading-font;
 }
-
+h4{
+    color: $akzent;
+    font-weight: bold;
+    font-family: $heading-font;
+}
 .brand{
     font-family: $brand-font;
+}
+p{
+    font-family: $main-font;
+    color: white;
 }
