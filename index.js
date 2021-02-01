@@ -200,3 +200,15 @@ Array.from(allLinks).forEach((link) => {
   }
 
   
+
+//Script for the movie-card
+
+const card = document.getElementsByClassName('moviecard__folder');
+
+for (let i = 0; i < 3; i++){
+    let count = i;
+    card[i].addEventListener("click", () => {
+        console.log(count)
+    })
+
+}

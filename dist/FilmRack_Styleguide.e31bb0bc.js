@@ -184,7 +184,21 @@ var onRouteChange = function onRouteChange() {
     pageContent.innerHTML = _content9;
     console.log(pageContent);
   }
+}; //Script for the movie-card
+
+
+var card = document.getElementsByClassName('moviecard__folder');
+
+var _loop = function _loop(i) {
+  var count = i;
+  card[i].addEventListener("click", function () {
+    console.log(count);
+  });
 };
+
+for (var i = 0; i < 3; i++) {
+  _loop(i);
+}
 },{}],"../../../../../home/christoph/.config/yarn/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';

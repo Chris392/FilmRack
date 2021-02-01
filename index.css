@@ -125,32 +125,64 @@ p {
 
 .container {
   margin-top: 20px;
-  width: 400px;
+  width: 850px;
 }
 
-.moviecard {
-  font-size: large;
+.moviecard__background {
+  background-color: #333333;
+  border-radius: 5px;
 }
-
+.moviecard__rank {
+  color: white;
+  padding-bottom: 10px;
+}
+.moviecard__media {
+  width: 100%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.moviecard__content {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.moviecard__time {
+  position: absolute;
+  right: 10px;
+}
+.moviecard__title {
+  line-height: 1.5;
+}
+.moviecard__data {
+  margin-bottom: 20px;
+}
+.moviecard__short_description {
+  line-height: 1.5;
+}
+.moviecard__long_description {
+  display: none;
+  line-height: 1.5;
+}
+.moviecard__directors {
+  display: none;
+}
+.moviecard__actors {
+  display: none;
+}
+.moviecard__folder {
+  margin-top: 35px;
+  padding-left: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-top: solid white;
+  border-width: 0.5px;
+  border-end-start-radius: 5px;
+  border-end-end-radius: 5px;
+}
 body {
   display: flex;
   color: white;
   background-color: #121212;
   font-family: "Open Sans", "Lato", sans-serif;
-}
-
-.moviecard__background {
-  background-color: #333333;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-}
-.moviecard__media {
-  width: 100%;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-}
-.moviecard__content {
-  padding: 15px;
 }
 
 /*# sourceMappingURL=index.css.map */
