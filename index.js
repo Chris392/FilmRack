@@ -249,14 +249,17 @@ Array.from(allLinks).forEach((link) => {
   }
 
  
-function cardAnimation(){
+//function cardAnimation(){
 
-//Script for the movie-card
+//Script for the movie-card & Up-Down Votes
 
 const card = document.getElementsByClassName('moviecard__folder')
 const shortDescription = document.getElementsByClassName('moviecard__short_description')
 const extended = document.getElementsByClassName('moviecard__extended')
 const actors = document.getElementsByClassName('moviecard__actors')
+
+const upvote = document.getElementsByClassName('vote__upvote')
+const downvote = document.getElementsByClassName('vote__downvote')
 
 console.log(shortDescription)
 
@@ -293,6 +296,8 @@ for (let i = 0; i < card.length; i++){
         
     })
 
-}
+
 
 }
+
+//}

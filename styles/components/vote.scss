@@ -1,0 +1,41 @@
+.vote{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 150px;
+    margin-top: 20px;
+
+    &__upvote{
+        width: 27px;
+        fill: red;
+        cursor: pointer;
+
+        &--active{
+            display: none;
+        }
+    }
+
+    &__downvote{
+        width: 27px;
+        padding-top: 16px;
+        cursor: pointer;
+
+        &--active{
+            display: none;
+        }
+    }
+
+    &__number_upvotes{
+        font-size: 1.7rem;
+        font-weight: bold;
+        font-family: $heading-font;
+        margin-right: 10px;
+    }
+
+    &__number_downvotes{
+        font-size: 1.7rem;
+        font-weight: bold;
+        font-family: $heading-font;
+    }
+}

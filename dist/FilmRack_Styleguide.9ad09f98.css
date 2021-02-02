@@ -186,7 +186,7 @@ p {
   line-height: 5;
 }
 .moviecard__folder {
-  margin-top: 35px;
+  margin-top: 25px;
   padding-left: 15px;
   padding-top: 15px;
   padding-bottom: 15px;
@@ -195,6 +195,41 @@ p {
   border-end-start-radius: 5px;
   border-end-end-radius: 5px;
   cursor: pointer;
+}
+
+.vote {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 150px;
+  margin-top: 20px;
+}
+.vote__upvote {
+  width: 27px;
+  fill: red;
+  cursor: pointer;
+}
+.vote__upvote--active {
+  display: none;
+}
+.vote__downvote {
+  width: 27px;
+  padding-top: 16px;
+  cursor: pointer;
+}
+.vote__downvote--active {
+  display: none;
+}
+.vote__number_upvotes {
+  font-size: 1.7rem;
+  font-weight: bold;
+  font-family: "Lato";
+  margin-right: 10px;
+}
+.vote__number_downvotes {
+  font-size: 1.7rem;
+  font-weight: bold;
+  font-family: "Lato";
 }
 
 body {

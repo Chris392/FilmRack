@@ -185,41 +185,42 @@ var onRouteChange = function onRouteChange() {
     console.log(pageContent);
     cardAnimation();
   }
+}; //function cardAnimation(){
+//Script for the movie-card & Up-Down Votes
+
+
+var card = document.getElementsByClassName('moviecard__folder');
+var shortDescription = document.getElementsByClassName('moviecard__short_description');
+var extended = document.getElementsByClassName('moviecard__extended');
+var actors = document.getElementsByClassName('moviecard__actors');
+var upvote = document.getElementsByClassName('vote__upvote');
+var downvote = document.getElementsByClassName('vote__downvote');
+console.log(shortDescription);
+
+var _loop = function _loop(i) {
+  var count = i;
+  card[count].addEventListener("click", function () {
+    if (card[count].innerHTML === "AUSKLAPPEN") {
+      shortDescription[count].classList.remove("moviecard__short_description--visible");
+      shortDescription[count].classList.add("moviecard__short_description--invisible");
+      extended[count].classList.remove("moviecard__extended--invisible");
+      extended[count].classList.add("moviecard__extended--visible");
+      actors[count].style.display = "block";
+      card[count].innerHTML = "EINKLAPPEN";
+    } else {
+      shortDescription[count].classList.add("moviecard__short_description--visible");
+      shortDescription[count].classList.remove("moviecard__short_description--invisible");
+      extended[count].classList.add("moviecard__extended--invisible");
+      extended[count].classList.remove("moviecard__extended--visible");
+      card[count].innerHTML = "AUSKLAPPEN";
+      actors[count].style.display = "none";
+    }
+  });
 };
 
-function cardAnimation() {
-  //Script for the movie-card
-  var card = document.getElementsByClassName('moviecard__folder');
-  var shortDescription = document.getElementsByClassName('moviecard__short_description');
-  var extended = document.getElementsByClassName('moviecard__extended');
-  var actors = document.getElementsByClassName('moviecard__actors');
-  console.log(shortDescription);
-
-  var _loop = function _loop(i) {
-    var count = i;
-    card[count].addEventListener("click", function () {
-      if (card[count].innerHTML === "AUSKLAPPEN") {
-        shortDescription[count].classList.remove("moviecard__short_description--visible");
-        shortDescription[count].classList.add("moviecard__short_description--invisible");
-        extended[count].classList.remove("moviecard__extended--invisible");
-        extended[count].classList.add("moviecard__extended--visible");
-        actors[count].style.display = "block";
-        card[count].innerHTML = "EINKLAPPEN";
-      } else {
-        shortDescription[count].classList.add("moviecard__short_description--visible");
-        shortDescription[count].classList.remove("moviecard__short_description--invisible");
-        extended[count].classList.add("moviecard__extended--invisible");
-        extended[count].classList.remove("moviecard__extended--visible");
-        card[count].innerHTML = "AUSKLAPPEN";
-        actors[count].style.display = "none";
-      }
-    });
-  };
-
-  for (var i = 0; i < card.length; i++) {
-    _loop(i);
-  }
-}
+for (var i = 0; i < card.length; i++) {
+  _loop(i);
+} //}
 },{}],"../../../../../home/christoph/.config/yarn/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -248,7 +249,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "42651" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "43921" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
