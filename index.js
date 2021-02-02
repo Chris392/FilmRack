@@ -192,8 +192,13 @@ Array.from(allLinks).forEach((link) => {
     else if (pathName === '/movie-Cards') {
         const content = `
             <h1> Movie Cards </h1>
+            <h2> Explanation </h2>
+            <p> Moviecards, nach BEM Naming Convention. Orientiert sich an Material Design und verwendet
+            mehrere States</p>
 
             <h2> Code </h2>
+
+            <h2> Sample </h2>
 
             <div class="container">
             <div class="moviecard">
@@ -255,8 +260,10 @@ Array.from(allLinks).forEach((link) => {
                     <div class="moviecard__folder moviecard__folder--upfolded">AUSKLAPPEN</div>
                 </div>
             </div>
-
     </div>
+
+    <h2>Description </h2>
+
         `
         
         pageContent.innerHTML = content
