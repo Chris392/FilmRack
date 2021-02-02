@@ -108,19 +108,84 @@ p {
   padding-left: 15px;
 }
 
-#content {
+
+.content {
   padding: 15px;
   height: 100vh;
   width: 80%;
   background-color: #121212;
 }
-#content h2 {
+
+.content h2 {
   margin-top: 15px;
   margin-bottom: 5px;
 }
-#content h3 {
+.content h3 {
   margin-top: 15px;
   margin-bottom: 5px;
+}
+
+.event {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: 5%;
+  margin-right: 5%;
+  height: 56px;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.event__host {
+  height: 100%;
+  border-radius: 10%;
+}
+.event__host img {
+  height: 100%;
+}
+
+.event__arrow {
+  width: 10%;
+  height: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.event__arrow img {
+  transform: scaleX(-1);
+}
+
+.event__info {
+  width: 75%;
+  padding-left: 5%;
+  color: white;
+}
+.event__info .event__name {
+  font-size: 1.2rem;
+  margin-top: 5px;
+  margin-bottom: 6px;
+  padding: 0;
+  color: white;
+}
+.event__info .event__detail {
+  margin-top: 0px;
+  margin-bottom: 5px;
+  padding: 0;
+  width: 70%;
+}
+.event__info .event__detail .event__time {
+  margin-right: 10px;
+}
+.event__info .event__detail .event__time img {
+  height: 100%;
+  vertical-align: sub;
+}
+.event__info .event__detail .event__date {
+  margin-right: 10px;
+}
+.event__info .event__detail .event__date img {
+  height: 100%;
+  vertical-align: sub;
 }
 
 body {
@@ -128,6 +193,11 @@ body {
   color: white;
   background-color: #333333;
   font-family: "Open Sans", "Lato", sans-serif;
+}
+.mobile_component {
+  width: 450px;
+  border-color: white;
+  border: 1px solid;
 }
 
 /*# sourceMappingURL=index.css.map */
