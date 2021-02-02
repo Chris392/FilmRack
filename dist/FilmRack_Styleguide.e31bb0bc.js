@@ -188,6 +188,10 @@ var onRouteChange = function onRouteChange() {
     var _content10 = "\n            <div class=\"mobile_component\">\n                <div class=\"event\">\n                    <div class=\"event__host\">\n                        <img src=\"./assets/sgratkx3xj731.png\" alt=\"hostpic\">\n                    </div>\n                    <div class=\"event__info\">\n                        <h3 class=\"event__name\">Max Movie Night</h3>\n                        <div class=\"event__detail\">\n                            <span class=\"event__time\"> <img src=\"./assets/schedule-white-18dp.svg\" alt=\"time\"> 20:00</span>\n                            <span class=\"event__date\"> <img src=\"./assets/event-white-18dp.svg\" alt=\"date\"> 19.12 </span>\n                        </div>\n                    </div>\n                    <a class=\"event__arrow\">\n                        <img src=\"./assets/outline_arrow_back_ios_white_18dp.png\" alt=\"arrow\">\n                    </a>\n                </div>\n            </div>\n        ";
     pageContent.innerHTML = _content10;
     console.log(pageContent);
+  } else if (pathName === '/listitem-cards') {
+    var _content11 = "\n                <div class=\"mobile_component\">\n                <div class=\"listcard\">\n                    <a href=\"#\" class=\"listcard__link\">\n                        <span class=\"listcard__rank listcard__rank--first\">\n                            1\n                        </span>\n                    </a>\n                </div>\n                <div class=\"listcard\">\n                    <a href=\"#\" class=\"listcard__link\">\n                        <span class=\"listcard__rank\">\n                            2\n                        </span>\n                    </a>\n                </div>\n            </div>\n        ";
+    pageContent.innerHTML = _content11;
+    console.log(pageContent);
   }
 };
 },{}],"../../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
@@ -218,7 +222,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52507" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51142" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

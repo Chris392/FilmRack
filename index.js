@@ -222,6 +222,29 @@ Array.from(allLinks).forEach((link) => {
         pageContent.innerHTML = content
         console.log(pageContent)
     }
-  }
+    else if (pathName === '/listitem-cards') {
+
+        const content = `
+                <div class="mobile_component">
+                <div class="listcard">
+                    <a href="#" class="listcard__link">
+                        <span class="listcard__rank listcard__rank--first">
+                            1
+                        </span>
+                    </a>
+                </div>
+                <div class="listcard">
+                    <a href="#" class="listcard__link">
+                        <span class="listcard__rank">
+                            2
+                        </span>
+                    </a>
+                </div>
+            </div>
+        `
+        pageContent.innerHTML = content
+        console.log(pageContent)
+    }
+}
 
   

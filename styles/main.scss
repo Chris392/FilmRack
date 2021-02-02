@@ -4,6 +4,7 @@
 'base/typography.scss', 
 'layout/sidebar.scss', 
 'layout/content.scss',
+'components/list_card.scss',
 'components/event_card.scss';
 
 body{
@@ -16,6 +17,8 @@ body{
     width: 450px;
     border-color: white;
     border: 1px solid;
+    display: flex;
+    flex-direction: row;
 }
 
 
