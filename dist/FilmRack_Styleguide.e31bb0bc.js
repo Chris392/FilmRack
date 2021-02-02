@@ -180,47 +180,109 @@ var onRouteChange = function onRouteChange() {
     pageContent.innerHTML = _content8;
     console.log(pageContent);
   } else if (pathName === '/movie-Cards') {
-    var _content9 = "\n            <h1> Movie Cards </h1>\n\n            <div class=\"container\">\n            <div class=\"moviecard\">\n                <h3 class=\"moviecard__rank\">Platz 6</h3>\n                <div class=\"moviecard__background\">\n                    <img class=\"moviecard__media\" src=\"images/Jumpstreet.PNG\" alt=\"Movie\">\n                    <div class=\"moviecard__content\">\n                        <p class=\"moviecard__time\">1 Std. 49 Min.</p>\n                        <h1 class=\"moviecard__title\">21 Jumpstreet</h1>\n                        <p class=\"moviecard__data\">2012 FSK-12 Action-Comedy-Crime</p>\n                        <p class=\"moviecard__short_description moviecard__shortdescription--visible\">A pair of underachieving cops are sent back to a local high school\n                        to blend in. </p> \n                        <div class=\"moviecard__extended moviecard__extended--invisible\">\n                            <p class=\"moviecard__long_description\">A pair of underachieving cops are sent back to a \n                            local high school to blend in and bring down a synthetic drug ring. \n                            The pair plays police officers who must go undercover in a high school to bust a drug ring, just like Johnny Depp in the original series.\n                            <p class=\"moviecard__directors\">Directors: Phil Lord, Christopher Miller</p>\n                            <p class=\"moviecard__actors\">Actors: Jonah Hill, Channing Tatum, Brie Larson </p>\n                        </div>\n                    </div>\n                    <div class=\"moviecard__folder moviecard__folder--upfolded\">AUSKLAPPEN</div>\n                </div>\n            </div>\n    \n    \n            <div class=\"moviecard\">\n                <h3 class=\"moviecard__rank\">Platz 6</h3>\n                <div class=\"moviecard__background\">\n                    <img class=\"moviecard__media\" src=\"images/Jumpstreet.PNG\" alt=\"Movie\">\n                    <div class=\"moviecard__content\">\n                        <p class=\"moviecard__time\">1 Std. 49 Min.</p>\n                        <h1 class=\"moviecard__title\">21 Jumpstreet</h1>\n                        <p class=\"moviecard__data\">2012 FSK-12 Action-Comedy-Crime</p>\n                        <p class=\"moviecard__short_description moviecard__shortdescription--visible\">A pair of underachieving cops are sent back to a local high school\n                        to blend in. </p> \n                        <div class=\"moviecard__extended moviecard__extended--invisible\">\n                            <p class=\"moviecard__long_description\">A pair of underachieving cops are sent back to a \n                            local high school to blend in and bring down a synthetic drug ring. \n                            The pair plays police officers who must go undercover in a high school to bust a drug ring, just like Johnny Depp in the original series.\n                            <p class=\"moviecard__directors\">Directors: Phil Lord, Christopher Miller</p>\n                            <p class=\"moviecard__actors\">Actors: Jonah Hill, Channing Tatum, Brie Larson </p>\n                        </div>\n                    </div>\n                    <div class=\"moviecard__folder moviecard__folder--upfolded\">AUSKLAPPEN</div>\n                </div>\n            </div>\n        </div>\n        ";
+    var _content9 = "\n            <h1> Movie Cards </h1>\n\n            <h2> Code </h2>\n\n            <div class=\"container\">\n            <div class=\"moviecard\">\n                <h3 class=\"moviecard__rank\">Platz 6</h3>\n                <div class=\"moviecard__background\">\n                    <img class=\"moviecard__media\" src=\"/Jumpstreet.865355ee.PNG\" alt=\"Movie\">\n                    <div class=\"moviecard__content\">\n                        <p class=\"moviecard__time\">1 Std. 49 Min.</p>\n                        <h1 class=\"moviecard__title\">21 Jumpstreet</h1>\n                        <p class=\"moviecard__data\">2012 FSK-12 Action-Comedy-Crime</p>\n                        <p class=\"moviecard__short_description moviecard__shortdescription--visible\">A pair of underachieving cops are sent back to a local high school\n                        to blend in. </p> \n                        <div class=\"moviecard__extended moviecard__extended--invisible\">\n                            <p class=\"moviecard__long_description\">A pair of underachieving cops are sent back to a \n                            local high school to blend in and bring down a synthetic drug ring. \n                            The pair plays police officers who must go undercover in a high school to bust a drug ring, just like Johnny Depp in the original series.\n                            </p><p class=\"moviecard__directors\">Directors: Phil Lord, Christopher Miller</p>\n                            <p class=\"moviecard__actors\">Actors: Jonah Hill, Channing Tatum, Brie Larson </p>\n                        </div>\n                        <div class=\"vote\">\n                            <img class=\"vote__upvote vote__upvote--inactive\" alt=\"daumen hoch\" src=\"/like.e674bbc8.svg\"> \n                            <img class=\"vote__upvote vote__upvote--active\" alt=\"daumen hoch\" src=\"/like_red.5c7a5463.svg\"> \n                            <p class=\"vote__number_upvotes\">4</p>\n                            <img class=\"vote__downvote vote__downvote--inactive\" alt=\"daumen runter\" src=\"/dislike.dbff8d8b.svg\">\n                            <img class=\"vote__downvote vote__downvote--active\" alt=\"daumen runter\" src=\"/dislike_red.e26c30cd.svg\">\n                            <p class=\"vote__number_downvotes\">10</p>\n                        </div>\n                    </div>\n                    <div class=\"moviecard__folder moviecard__folder--upfolded\">AUSKLAPPEN</div>\n                </div>\n            </div>\n\n            <div class=\"moviecard\">\n                <h3 class=\"moviecard__rank\">Platz 6</h3>\n                <div class=\"moviecard__background\">\n                    <img class=\"moviecard__media\" src=\"/Jumpstreet.865355ee.PNG\" alt=\"Movie\">\n                    <div class=\"moviecard__content\">\n                        <p class=\"moviecard__time\">1 Std. 49 Min.</p>\n                        <h1 class=\"moviecard__title\">21 Jumpstreet</h1>\n                        <p class=\"moviecard__data\">2012 FSK-12 Action-Comedy-Crime</p>\n                        <p class=\"moviecard__short_description moviecard__shortdescription--visible\">A pair of underachieving cops are sent back to a local high school\n                        to blend in. </p> \n                        <div class=\"moviecard__extended moviecard__extended--invisible\">\n                            <p class=\"moviecard__long_description\">A pair of underachieving cops are sent back to a \n                            local high school to blend in and bring down a synthetic drug ring. \n                            The pair plays police officers who must go undercover in a high school to bust a drug ring, just like Johnny Depp in the original series.\n                            </p><p class=\"moviecard__directors\">Directors: Phil Lord, Christopher Miller</p>\n                            <p class=\"moviecard__actors\">Actors: Jonah Hill, Channing Tatum, Brie Larson </p>\n                        </div>\n                        <div class=\"vote\">\n                            <img class=\"vote__upvote vote__upvote--inactive\" alt=\"daumen hoch\" src=\"/like.e674bbc8.svg\"> \n                            <img class=\"vote__upvote vote__upvote--active\" alt=\"daumen hoch\" src=\"/like_red.5c7a5463.svg\"> \n                            <p class=\"vote__number_upvotes\">4</p>\n                            <img class=\"vote__downvote vote__downvote--inactive\" alt=\"daumen runter\" src=\"/dislike.dbff8d8b.svg\">\n                            <img class=\"vote__downvote vote__downvote--active\" alt=\"daumen runter\" src=\"/dislike_red.e26c30cd.svg\">\n                            <p class=\"vote__number_downvotes\">10</p>\n                        </div>\n                    </div>\n                    <div class=\"moviecard__folder moviecard__folder--upfolded\">AUSKLAPPEN</div>\n                </div>\n            </div>\n\n    </div>\n        ";
     pageContent.innerHTML = _content9;
     console.log(pageContent);
     cardAnimation();
   }
-}; //function cardAnimation(){
-//Script for the movie-card & Up-Down Votes
-
-
-var card = document.getElementsByClassName('moviecard__folder');
-var shortDescription = document.getElementsByClassName('moviecard__short_description');
-var extended = document.getElementsByClassName('moviecard__extended');
-var actors = document.getElementsByClassName('moviecard__actors');
-var upvote = document.getElementsByClassName('vote__upvote');
-var downvote = document.getElementsByClassName('vote__downvote');
-console.log(shortDescription);
-
-var _loop = function _loop(i) {
-  var count = i;
-  card[count].addEventListener("click", function () {
-    if (card[count].innerHTML === "AUSKLAPPEN") {
-      shortDescription[count].classList.remove("moviecard__short_description--visible");
-      shortDescription[count].classList.add("moviecard__short_description--invisible");
-      extended[count].classList.remove("moviecard__extended--invisible");
-      extended[count].classList.add("moviecard__extended--visible");
-      actors[count].style.display = "block";
-      card[count].innerHTML = "EINKLAPPEN";
-    } else {
-      shortDescription[count].classList.add("moviecard__short_description--visible");
-      shortDescription[count].classList.remove("moviecard__short_description--invisible");
-      extended[count].classList.add("moviecard__extended--invisible");
-      extended[count].classList.remove("moviecard__extended--visible");
-      card[count].innerHTML = "AUSKLAPPEN";
-      actors[count].style.display = "none";
-    }
-  });
 };
 
-for (var i = 0; i < card.length; i++) {
-  _loop(i);
-} //}
+function cardAnimation() {
+  //Script for the movie-card & Up-Down Votes
+  var card = document.getElementsByClassName('moviecard__folder');
+  var shortDescription = document.getElementsByClassName('moviecard__short_description');
+  var extended = document.getElementsByClassName('moviecard__extended');
+  var actors = document.getElementsByClassName('moviecard__actors');
+  var upvote = document.getElementsByClassName('vote__upvote vote__upvote--inactive');
+  var upvoteRed = document.getElementsByClassName('vote__upvote vote__upvote--active');
+  var downvote = document.getElementsByClassName('vote__downvote vote__downvote--inactive');
+  console.log(downvote);
+  var downvoteRed = document.getElementsByClassName('vote__downvote vote__downvote--active');
+  var upvoteNumber = document.getElementsByClassName('vote__number_upvotes');
+  var downvoteNumber = document.getElementsByClassName('vote__number_downvotes');
+  var state = "neutral";
+  console.log(shortDescription);
+
+  var _loop = function _loop(i) {
+    var count = i;
+    var currentUpvotes = upvoteNumber[count].innerHTML;
+    var currentDownvotes = downvoteNumber[count].innerHTML;
+    card[count].addEventListener("click", function () {
+      if (card[count].innerHTML === "AUSKLAPPEN") {
+        shortDescription[count].classList.remove("moviecard__short_description--visible");
+        shortDescription[count].classList.add("moviecard__short_description--invisible");
+        extended[count].classList.remove("moviecard__extended--invisible");
+        extended[count].classList.add("moviecard__extended--visible");
+        actors[count].style.display = "block";
+        card[count].innerHTML = "EINKLAPPEN";
+      } else {
+        shortDescription[count].classList.add("moviecard__short_description--visible");
+        shortDescription[count].classList.remove("moviecard__short_description--invisible");
+        extended[count].classList.add("moviecard__extended--invisible");
+        extended[count].classList.remove("moviecard__extended--visible");
+        card[count].innerHTML = "AUSKLAPPEN";
+        actors[count].style.display = "none";
+      }
+    });
+    upvote[count].addEventListener("click", function () {
+      upvoteRed[count].style.display = "block";
+      upvote[count].style.display = "none";
+
+      if (state = "downvoted") {
+        downvoteRed[count].style.display = "none";
+        downvote[count].style.display = "block";
+      }
+
+      state = "upvoted";
+      changeNumbers();
+    });
+    upvoteRed[count].addEventListener("click", function () {
+      upvoteRed[count].style.display = "none";
+      upvote[count].style.display = "block";
+      state = "neutral";
+      changeNumbers();
+    });
+    downvote[count].addEventListener("click", function () {
+      downvoteRed[count].style.display = "block";
+      downvote[count].style.display = "none";
+
+      if (state = "upvoted") {
+        upvoteRed[count].style.display = "none";
+        upvote[count].style.display = "block";
+      }
+
+      state = "downvoted";
+      changeNumbers();
+    });
+    downvoteRed[count].addEventListener("click", function () {
+      downvoteRed[count].style.display = "none";
+      downvote[count].style.display = "block";
+      state = "neutral";
+      changeNumbers();
+    });
+
+    function changeNumbers() {
+      if (state === "neutral") {
+        upvoteNumber[count].innerHTML = currentUpvotes;
+        downvoteNumber[count].innerHTML = currentDownvotes;
+      } else if (state === "upvoted") {
+        var newNr = currentUpvotes;
+        newNr++;
+        upvoteNumber[count].innerHTML = newNr++;
+        downvoteNumber[count].innerHTML = currentDownvotes;
+      } else if (state === "downvoted") {
+        var _newNr = currentDownvotes;
+        _newNr++;
+        upvoteNumber[count].innerHTML = currentUpvotes;
+        downvoteNumber[count].innerHTML = _newNr;
+      }
+    }
+  };
+
+  for (var i = 0; i < card.length; i++) {
+    _loop(i);
+  }
+}
 },{}],"../../../../../home/christoph/.config/yarn/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -249,7 +311,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "43921" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "45553" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

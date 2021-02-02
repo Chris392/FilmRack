@@ -126,10 +126,14 @@ p {
 .container {
   margin-top: 20px;
   width: 450px;
+  margin: auto;
+  border: solid 0.2px grey;
 }
 
 .moviecard {
   margin-bottom: 100px;
+  margin-right: 5px;
+  margin-left: 5px;
 }
 .moviecard__background {
   background-color: #333333;
@@ -174,13 +178,13 @@ p {
   overflow: hidden;
 }
 .moviecard__extended--invisible {
-  transition: max-height 0.3s;
+  transition: max-height 0.5s ease-in;
   max-height: 0px;
   visibility: hidden;
 }
 .moviecard__extended--visible {
   max-height: 500px;
-  transition: max-height 0.5s;
+  transition: max-height 0.5s ease-in;
 }
 .moviecard__directors {
   line-height: 5;
