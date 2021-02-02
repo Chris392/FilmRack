@@ -245,6 +245,33 @@ Array.from(allLinks).forEach((link) => {
         pageContent.innerHTML = content
         console.log(pageContent)
     }
+    else if (pathName === '/bottom-nav') {
+
+        const content = `
+                <div class="mobile_component">
+                    <nav class="bottom_nav">
+                        <a href="#" class="bottom_nav__link bottom_nav__link--active">
+                            <i class="material-icons bottom_nav__icon">assessment</i>
+                            <span class="bottom_nav__text bottom_nav__text--active">Ranking</span>
+                        </a>
+                        <a href="#" class="bottom_nav__link">
+                            <i class="material-icons">theaters</i>
+                            <span class="bottom_nav__text">Details</span>
+                        </a>
+                        <a href="#" class="bottom_nav__link">
+                            <i class="material-icons">chat</i>
+                            <span class="bottom_nav__text">Chat</span>
+                        </a>
+                        <a href="#" class="bottom_nav__link">    
+                            <i class="material-icons">assignment</i>
+                            <span class="bottom_nav__text">Organisation</span>
+                        </a>
+                    </nav>
+                </div>
+        `
+        pageContent.innerHTML = content
+        console.log(pageContent)
+    }
 }
 
   

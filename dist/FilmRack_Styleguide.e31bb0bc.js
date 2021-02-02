@@ -192,6 +192,10 @@ var onRouteChange = function onRouteChange() {
     var _content11 = "\n                <div class=\"mobile_component\">\n                <div class=\"listcard\">\n                    <a href=\"#\" class=\"listcard__link\">\n                        <span class=\"listcard__rank listcard__rank--first\">\n                            1\n                        </span>\n                    </a>\n                </div>\n                <div class=\"listcard\">\n                    <a href=\"#\" class=\"listcard__link\">\n                        <span class=\"listcard__rank\">\n                            2\n                        </span>\n                    </a>\n                </div>\n            </div>\n        ";
     pageContent.innerHTML = _content11;
     console.log(pageContent);
+  } else if (pathName === '/bottom-nav') {
+    var _content12 = "\n                <div class=\"mobile_component\">\n                    <nav class=\"bottom_nav\">\n                        <a href=\"#\" class=\"bottom_nav__link bottom_nav__link--active\">\n                            <i class=\"material-icons bottom_nav__icon\">assessment</i>\n                            <span class=\"bottom_nav__text bottom_nav__text--active\">Ranking</span>\n                        </a>\n                        <a href=\"#\" class=\"bottom_nav__link\">\n                            <i class=\"material-icons\">theaters</i>\n                            <span class=\"bottom_nav__text\">Details</span>\n                        </a>\n                        <a href=\"#\" class=\"bottom_nav__link\">\n                            <i class=\"material-icons\">chat</i>\n                            <span class=\"bottom_nav__text\">Chat</span>\n                        </a>\n                        <a href=\"#\" class=\"bottom_nav__link\">    \n                            <i class=\"material-icons\">assignment</i>\n                            <span class=\"bottom_nav__text\">Organisation</span>\n                        </a>\n                    </nav>\n                </div>\n        ";
+    pageContent.innerHTML = _content12;
+    console.log(pageContent);
   }
 };
 },{}],"../../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
@@ -222,7 +226,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51142" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49526" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
