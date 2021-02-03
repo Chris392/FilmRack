@@ -219,7 +219,7 @@ Array.from(allLinks).forEach((link) => {
                             <p class="moviecard__actors">Actors: Jonah Hill, Channing Tatum, Brie Larson </p>
                         </div>
                         <div class="vote">
-                            <span class="material-icons vote__upvote">
+                            <span class="material-icons vote__upvote vote__upvote">
                             thumb_up_off_alt
                             </span>
                             <p class="vote__number_upvotes">4</p>
@@ -300,6 +300,7 @@ console.log(shortDescription)
 
 for (let i = 0; i < card.length; i++){
     let count = i;
+    //Die Anzahl der Aktuellen Up- und Downvotes wird gespeichert
     let currentUpvotes = upvoteNumber[count].innerHTML
     let currentDownvotes = downvoteNumber[count].innerHTML
 
@@ -334,66 +335,79 @@ for (let i = 0; i < card.length; i++){
         }
     })
 
+    //Wenn Upvote geklickt wird...
     upvote[count].addEventListener("click", () => {
-        //upvote active
-        upvoteRed[count].style.display="block"
-        upvote[count].style.display="none"
 
 
+        // ... und der State liked ist:
+        // ... wird upvote auf inaktive gesetzt
+        if(state === "upvoted"){
+            upvote[count].classList.remove('vote__upvote--active')
 
-        if(state = "downvoted"){
-            //downvote neutral
-            downvoteRed[count].style.display="none"
-            downvote[count].style.display="block"
+            state = "neutral"
         }
 
-        state="upvoted"
+        // ... und der State neutral ist:
+        // ... wird upvote auf active gesetzt und der state auf liked:
+        else if(state === "neutral"){
+            upvote[count].classList.add('vote__upvote--active')
+
+            state = "upvoted"
+        }
+
+        // ... und der State downvoted ist:
+        // ... wird upvote auf active und downvote auf inactive und der state auf upvoted gesetzt
+        else if(state === "downvoted"){
+            upvote[count].classList.add('vote__upvote--active')
+            downvote[count].classList.remove('vote__downvote--active')
+
+            state = "upvoted"
+        }
+
         changeNumbers()
     })
 
-    /*
-    upvoteRed[count].addEventListener("click", () => {
-        upvoteRed[count].style.display="none"
-        upvote[count].style.display="block"
 
-        state="neutral"
-        changeNumbers()
-    })
-    */
-
+    //Wenn Downvote geklickt wird...
     downvote[count].addEventListener("click", () => {
-        //downvote neutral
-        downvoteRed[count].style.display="block"
-        downvote[count].style.display="none"
 
+        // ... und der State downvoted ist:
+        // ... wird downvoted auf inactive gesetzt
+        if(state === "downvoted"){
+            downvote[count].classList.remove('vote__downvote--active')
 
-        if(state = "upvoted"){
-        //upvote active
-        upvoteRed[count].style.display="none"
-        upvote[count].style.display="block"
+            state="neutral"
         }
-        state = "downvoted"
+
+
+        // ... und der State neutral ist:
+        // ... wird downvote auf active gesetzt und der state auf downvoted:
+        else if(state === "neutral"){
+            downvote[count].classList.add('vote__downvote--active')
+
+            state="downvoted"
+        }
+
+        // ... und der State upvoted ist:
+        // ... wird downvoted auf active und upvoted auf inactive und der state auf downvoted gesetzt
+        else if(state === "upvoted"){
+            downvote[count].classList.add('vote__downvote--active')
+            upvote[count].classList.remove('vote__upvote--active')
+
+            state="downvoted"
+        }
+
+
         changeNumbers()
     })
 
-    /*
-    downvoteRed[count].addEventListener("click", () => {
-        downvoteRed[count].style.display="none"
-        downvote[count].style.display="block"
 
-        state = "neutral"
-        changeNumbers()
-    })
-    */
 
     function changeNumbers(){
 
         if(state === "neutral"){
             upvoteNumber[count].innerHTML = currentUpvotes
             downvoteNumber[count].innerHTML = currentDownvotes
-
-            downvoteRed[count].style.display="none"
-            downvote[count].style.display="block"
         }
         else if(state === "upvoted"){
             let newNr = currentUpvotes   
