@@ -180,7 +180,7 @@ var onRouteChange = function onRouteChange() {
     pageContent.innerHTML = _content8;
     console.log(pageContent);
   } else if (pathName === '/movie-Cards') {
-    var _content9 = "\n            <h1> Movie Cards </h1>\n            <h2> Explanation </h2>\n            <p> Moviecards, nach BEM Naming Convention. Orientiert sich an Material Design und verwendet\n            mehrere States</p>\n\n            <h2> Code </h2>\n\n            <h2> Sample </h2>\n\n            <div class=\"container\">\n            <div class=\"moviecard\">\n                <h3 class=\"moviecard__rank\">Platz 6</h3>\n                <div class=\"moviecard__background\">\n                    <img class=\"moviecard__media\" src=\"/Jumpstreet.865355ee.PNG\" alt=\"Movie\">\n                    <div class=\"moviecard__content\">\n                        <p class=\"moviecard__time\">1 Std. 49 Min.</p>\n                        <h1 class=\"moviecard__title\">21 Jumpstreet</h1>\n                        <p class=\"moviecard__data\">2012 FSK-12 Action-Comedy-Crime</p>\n                        <p class=\"moviecard__short_description moviecard__shortdescription--visible\">A pair of underachieving cops are sent back to a local high school\n                        to blend in. </p> \n                        <div class=\"moviecard__extended moviecard__extended--invisible\">\n                            <p class=\"moviecard__long_description\">A pair of underachieving cops are sent back to a \n                            local high school to blend in and bring down a synthetic drug ring. \n                            The pair plays police officers who must go undercover in a high school to bust a drug ring, just like Johnny Depp in the original series.\n                            </p><p class=\"moviecard__directors\">Directors: Phil Lord, Christopher Miller</p>\n                            <p class=\"moviecard__actors\">Actors: Jonah Hill, Channing Tatum, Brie Larson </p>\n                        </div>\n                        <div class=\"vote\">\n                            <img class=\"vote__upvote vote__upvote--inactive\" alt=\"daumen hoch\" src=\"/like.e674bbc8.svg\"> \n                            <img class=\"vote__upvote vote__upvote--active\" alt=\"daumen hoch\" src=\"/like_red.5c7a5463.svg\"> \n                            <p class=\"vote__number_upvotes\">4</p>\n                            <img class=\"vote__downvote vote__downvote--inactive\" alt=\"daumen runter\" src=\"/dislike.dbff8d8b.svg\">\n                            <img class=\"vote__downvote vote__downvote--active\" alt=\"daumen runter\" src=\"/dislike_red.e26c30cd.svg\">\n                            <p class=\"vote__number_downvotes\">10</p>\n                        </div>\n                    </div>\n                    <div class=\"moviecard__folder moviecard__folder--upfolded\">AUSKLAPPEN</div>\n                </div>\n            </div>\n\n            <div class=\"moviecard\">\n                <h3 class=\"moviecard__rank\">Platz 6</h3>\n                <div class=\"moviecard__background\">\n                    <img class=\"moviecard__media\" src=\"/Jumpstreet.865355ee.PNG\" alt=\"Movie\">\n                    <div class=\"moviecard__content\">\n                        <p class=\"moviecard__time\">1 Std. 49 Min.</p>\n                        <h1 class=\"moviecard__title\">21 Jumpstreet</h1>\n                        <p class=\"moviecard__data\">2012 FSK-12 Action-Comedy-Crime</p>\n                        <p class=\"moviecard__short_description moviecard__shortdescription--visible\">A pair of underachieving cops are sent back to a local high school\n                        to blend in. </p> \n                        <div class=\"moviecard__extended moviecard__extended--invisible\">\n                            <p class=\"moviecard__long_description\">A pair of underachieving cops are sent back to a \n                            local high school to blend in and bring down a synthetic drug ring. \n                            The pair plays police officers who must go undercover in a high school to bust a drug ring, just like Johnny Depp in the original series.\n                            </p><p class=\"moviecard__directors\">Directors: Phil Lord, Christopher Miller</p>\n                            <p class=\"moviecard__actors\">Actors: Jonah Hill, Channing Tatum, Brie Larson </p>\n                        </div>\n                        <div class=\"vote\">\n                            <img class=\"vote__upvote vote__upvote--inactive\" alt=\"daumen hoch\" src=\"/like.e674bbc8.svg\"> \n                            <img class=\"vote__upvote vote__upvote--active\" alt=\"daumen hoch\" src=\"/like_red.5c7a5463.svg\"> \n                            <p class=\"vote__number_upvotes\">4</p>\n                            <img class=\"vote__downvote vote__downvote--inactive\" alt=\"daumen runter\" src=\"/dislike.dbff8d8b.svg\">\n                            <img class=\"vote__downvote vote__downvote--active\" alt=\"daumen runter\" src=\"/dislike_red.e26c30cd.svg\">\n                            <p class=\"vote__number_downvotes\">10</p>\n                        </div>\n                    </div>\n                    <div class=\"moviecard__folder moviecard__folder--upfolded\">AUSKLAPPEN</div>\n                </div>\n            </div>\n    </div>\n\n    <h2>Description </h2>\n\n        ";
+    var _content9 = "\n            <h1> Movie Cards </h1>\n            <h2> Explanation </h2>\n            <p> Moviecards, nach BEM Naming Convention. Orientiert sich an Material Design und verwendet\n            mehrere States</p>\n\n            <h2> Code </h2>\n\n            <h2> Sample </h2>\n\n            <div class=\"container\">\n            <div class=\"moviecard\">\n                <h3 class=\"moviecard__rank\">Platz 6</h3>\n                <div class=\"moviecard__background\">\n                    <img class=\"moviecard__media\" src=\"/Jumpstreet.865355ee.PNG\" alt=\"Movie\">\n                    <div class=\"moviecard__content\">\n                        <p class=\"moviecard__time\">1 Std. 49 Min.</p>\n                        <h1 class=\"moviecard__title\">21 Jumpstreet</h1>\n                        <p class=\"moviecard__data\">2012 FSK-12 Action-Comedy-Crime</p>\n                        <p class=\"moviecard__short_description moviecard__shortdescription--visible\">A pair of underachieving cops are sent back to a local high school\n                        to blend in. </p> \n                        <div class=\"moviecard__extended moviecard__extended--invisible\">\n                            <p class=\"moviecard__long_description\">A pair of underachieving cops are sent back to a \n                            local high school to blend in and bring down a synthetic drug ring. \n                            The pair plays police officers who must go undercover in a high school to bust a drug ring, just like Johnny Depp in the original series.\n                            </p><p class=\"moviecard__directors\">Directors: Phil Lord, Christopher Miller</p>\n                            <p class=\"moviecard__actors\">Actors: Jonah Hill, Channing Tatum, Brie Larson </p>\n                        </div>\n                        <div class=\"vote\">\n                            <span class=\"material-icons vote__upvote\">\n                            thumb_up_off_alt\n                            </span>\n                            <p class=\"vote__number_upvotes\">4</p>\n                            <span class=\"material-icons vote__downvote\">\n                            thumb_down_off_alt\n                            </span>\n                            <p class=\"vote__number_downvotes\">10</p>\n                        </div>\n                    </div>\n                    <div class=\"moviecard__folder moviecard__folder--upfolded\">AUSKLAPPEN</div>\n                </div>\n            </div>\n\n            <div class=\"moviecard\">\n                <h3 class=\"moviecard__rank\">Platz 6</h3>\n                <div class=\"moviecard__background\">\n                    <img class=\"moviecard__media\" src=\"/Jumpstreet.865355ee.PNG\" alt=\"Movie\">\n                    <div class=\"moviecard__content\">\n                        <p class=\"moviecard__time\">1 Std. 49 Min.</p>\n                        <h1 class=\"moviecard__title\">21 Jumpstreet</h1>\n                        <p class=\"moviecard__data\">2012 FSK-12 Action-Comedy-Crime</p>\n                        <p class=\"moviecard__short_description moviecard__shortdescription--visible\">A pair of underachieving cops are sent back to a local high school\n                        to blend in. </p> \n                        <div class=\"moviecard__extended moviecard__extended--invisible\">\n                            <p class=\"moviecard__long_description\">A pair of underachieving cops are sent back to a \n                            local high school to blend in and bring down a synthetic drug ring. \n                            The pair plays police officers who must go undercover in a high school to bust a drug ring, just like Johnny Depp in the original series.\n                            </p><p class=\"moviecard__directors\">Directors: Phil Lord, Christopher Miller</p>\n                            <p class=\"moviecard__actors\">Actors: Jonah Hill, Channing Tatum, Brie Larson </p>\n                        </div>\n                        <div class=\"vote\">\n                            <span class=\"material-icons vote__upvote\">\n                            thumb_up_off_alt\n                            </span>\n                            <p class=\"vote__number_upvotes\">4</p>\n                            <span class=\"material-icons vote__downvote\">\n                            thumb_down_off_alt\n                            </span>\n                            <p class=\"vote__number_downvotes\">10</p>\n                        </div>\n                    </div>\n                    <div class=\"moviecard__folder moviecard__folder--upfolded\">AUSKLAPPEN</div>\n                </div>\n            </div>\n    </div>\n\n    <h2>Description </h2>\n\n        ";
     pageContent.innerHTML = _content9;
     console.log(pageContent);
     cardAnimation();
@@ -193,11 +193,8 @@ function cardAnimation() {
   var shortDescription = document.getElementsByClassName('moviecard__short_description');
   var extended = document.getElementsByClassName('moviecard__extended');
   var actors = document.getElementsByClassName('moviecard__actors');
-  var upvote = document.getElementsByClassName('vote__upvote vote__upvote--inactive');
-  var upvoteRed = document.getElementsByClassName('vote__upvote vote__upvote--active');
-  var downvote = document.getElementsByClassName('vote__downvote vote__downvote--inactive');
-  console.log(downvote);
-  var downvoteRed = document.getElementsByClassName('vote__downvote vote__downvote--active');
+  var upvote = document.getElementsByClassName('vote__upvote');
+  var downvote = document.getElementsByClassName('vote__downvote');
   var upvoteNumber = document.getElementsByClassName('vote__number_upvotes');
   var downvoteNumber = document.getElementsByClassName('vote__number_downvotes');
   var state = "neutral";
@@ -225,10 +222,12 @@ function cardAnimation() {
       }
     });
     upvote[count].addEventListener("click", function () {
+      //upvote active
       upvoteRed[count].style.display = "block";
       upvote[count].style.display = "none";
 
       if (state = "downvoted") {
+        //downvote neutral
         downvoteRed[count].style.display = "none";
         downvote[count].style.display = "block";
       }
@@ -236,17 +235,22 @@ function cardAnimation() {
       state = "upvoted";
       changeNumbers();
     });
-    upvoteRed[count].addEventListener("click", function () {
-      upvoteRed[count].style.display = "none";
-      upvote[count].style.display = "block";
-      state = "neutral";
-      changeNumbers();
-    });
+    /*
+    upvoteRed[count].addEventListener("click", () => {
+        upvoteRed[count].style.display="none"
+        upvote[count].style.display="block"
+         state="neutral"
+        changeNumbers()
+    })
+    */
+
     downvote[count].addEventListener("click", function () {
+      //downvote neutral
       downvoteRed[count].style.display = "block";
       downvote[count].style.display = "none";
 
       if (state = "upvoted") {
+        //upvote active
         upvoteRed[count].style.display = "none";
         upvote[count].style.display = "block";
       }
@@ -254,17 +258,21 @@ function cardAnimation() {
       state = "downvoted";
       changeNumbers();
     });
-    downvoteRed[count].addEventListener("click", function () {
-      downvoteRed[count].style.display = "none";
-      downvote[count].style.display = "block";
-      state = "neutral";
-      changeNumbers();
-    });
+    /*
+    downvoteRed[count].addEventListener("click", () => {
+        downvoteRed[count].style.display="none"
+        downvote[count].style.display="block"
+         state = "neutral"
+        changeNumbers()
+    })
+    */
 
     function changeNumbers() {
       if (state === "neutral") {
         upvoteNumber[count].innerHTML = currentUpvotes;
         downvoteNumber[count].innerHTML = currentDownvotes;
+        downvoteRed[count].style.display = "none";
+        downvote[count].style.display = "block";
       } else if (state === "upvoted") {
         var newNr = currentUpvotes;
         newNr++;

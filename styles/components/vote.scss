@@ -6,22 +6,25 @@
     width: 150px;
     margin-top: 20px;
 
+    .material-icons{
+        font-size: 2.5rem;
+    }
+
     &__upvote{
-        width: 27px;
-        fill: red;
         cursor: pointer;
 
         &--active{
+            color: red;
             display: none;
         }
     }
 
     &__downvote{
-        width: 27px;
         padding-top: 16px;
         cursor: pointer;
 
         &--active{
+            color: red;
             display: none;
         }
     }
@@ -30,7 +33,6 @@
         font-size: 1.7rem;
         font-weight: bold;
         font-family: $heading-font;
-        margin-right: 10px;
     }
 
     &__number_downvotes{
@@ -38,4 +40,8 @@
         font-weight: bold;
         font-family: $heading-font;
     }
+}
+
+.material-icons.red{
+    color: red;
 }

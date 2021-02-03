@@ -219,11 +219,13 @@ Array.from(allLinks).forEach((link) => {
                             <p class="moviecard__actors">Actors: Jonah Hill, Channing Tatum, Brie Larson </p>
                         </div>
                         <div class="vote">
-                            <img class="vote__upvote vote__upvote--inactive" alt="daumen hoch" src="/like.e674bbc8.svg"> 
-                            <img class="vote__upvote vote__upvote--active" alt="daumen hoch" src="/like_red.5c7a5463.svg"> 
+                            <span class="material-icons vote__upvote">
+                            thumb_up_off_alt
+                            </span>
                             <p class="vote__number_upvotes">4</p>
-                            <img class="vote__downvote vote__downvote--inactive" alt="daumen runter" src="/dislike.dbff8d8b.svg">
-                            <img class="vote__downvote vote__downvote--active" alt="daumen runter" src="/dislike_red.e26c30cd.svg">
+                            <span class="material-icons vote__downvote">
+                            thumb_down_off_alt
+                            </span>
                             <p class="vote__number_downvotes">10</p>
                         </div>
                     </div>
@@ -249,11 +251,13 @@ Array.from(allLinks).forEach((link) => {
                             <p class="moviecard__actors">Actors: Jonah Hill, Channing Tatum, Brie Larson </p>
                         </div>
                         <div class="vote">
-                            <img class="vote__upvote vote__upvote--inactive" alt="daumen hoch" src="/like.e674bbc8.svg"> 
-                            <img class="vote__upvote vote__upvote--active" alt="daumen hoch" src="/like_red.5c7a5463.svg"> 
+                            <span class="material-icons vote__upvote">
+                            thumb_up_off_alt
+                            </span>
                             <p class="vote__number_upvotes">4</p>
-                            <img class="vote__downvote vote__downvote--inactive" alt="daumen runter" src="/dislike.dbff8d8b.svg">
-                            <img class="vote__downvote vote__downvote--active" alt="daumen runter" src="/dislike_red.e26c30cd.svg">
+                            <span class="material-icons vote__downvote">
+                            thumb_down_off_alt
+                            </span>
                             <p class="vote__number_downvotes">10</p>
                         </div>
                     </div>
@@ -283,16 +287,11 @@ const shortDescription = document.getElementsByClassName('moviecard__short_descr
 const extended = document.getElementsByClassName('moviecard__extended')
 const actors = document.getElementsByClassName('moviecard__actors')
 
-const upvote = document.getElementsByClassName('vote__upvote vote__upvote--inactive')
-const upvoteRed = document.getElementsByClassName('vote__upvote vote__upvote--active')
-const downvote = document.getElementsByClassName('vote__downvote vote__downvote--inactive')
-console.log(downvote)
-const downvoteRed = document.getElementsByClassName('vote__downvote vote__downvote--active')
+const upvote = document.getElementsByClassName('vote__upvote')
+const downvote = document.getElementsByClassName('vote__downvote')
 
 const upvoteNumber = document.getElementsByClassName('vote__number_upvotes')
 const downvoteNumber = document.getElementsByClassName('vote__number_downvotes')
-
-
 
 
 let state = "neutral";
@@ -336,12 +335,14 @@ for (let i = 0; i < card.length; i++){
     })
 
     upvote[count].addEventListener("click", () => {
+        //upvote active
         upvoteRed[count].style.display="block"
         upvote[count].style.display="none"
 
 
 
         if(state = "downvoted"){
+            //downvote neutral
             downvoteRed[count].style.display="none"
             downvote[count].style.display="block"
         }
@@ -350,6 +351,7 @@ for (let i = 0; i < card.length; i++){
         changeNumbers()
     })
 
+    /*
     upvoteRed[count].addEventListener("click", () => {
         upvoteRed[count].style.display="none"
         upvote[count].style.display="block"
@@ -357,13 +359,16 @@ for (let i = 0; i < card.length; i++){
         state="neutral"
         changeNumbers()
     })
+    */
 
     downvote[count].addEventListener("click", () => {
+        //downvote neutral
         downvoteRed[count].style.display="block"
         downvote[count].style.display="none"
 
 
         if(state = "upvoted"){
+        //upvote active
         upvoteRed[count].style.display="none"
         upvote[count].style.display="block"
         }
@@ -371,6 +376,7 @@ for (let i = 0; i < card.length; i++){
         changeNumbers()
     })
 
+    /*
     downvoteRed[count].addEventListener("click", () => {
         downvoteRed[count].style.display="none"
         downvote[count].style.display="block"
@@ -378,18 +384,23 @@ for (let i = 0; i < card.length; i++){
         state = "neutral"
         changeNumbers()
     })
+    */
 
     function changeNumbers(){
 
         if(state === "neutral"){
             upvoteNumber[count].innerHTML = currentUpvotes
             downvoteNumber[count].innerHTML = currentDownvotes
+
+            downvoteRed[count].style.display="none"
+            downvote[count].style.display="block"
         }
         else if(state === "upvoted"){
             let newNr = currentUpvotes   
             newNr++       
             upvoteNumber[count].innerHTML = newNr++
             downvoteNumber[count].innerHTML = currentDownvotes
+            
         }
         else if(state === "downvoted"){
             let newNr = currentDownvotes

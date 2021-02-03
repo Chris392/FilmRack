@@ -208,32 +208,37 @@ p {
   width: 150px;
   margin-top: 20px;
 }
+.vote .material-icons {
+  font-size: 2.5rem;
+}
 .vote__upvote {
-  width: 27px;
-  fill: red;
   cursor: pointer;
 }
 .vote__upvote--active {
+  color: red;
   display: none;
 }
 .vote__downvote {
-  width: 27px;
   padding-top: 16px;
   cursor: pointer;
 }
 .vote__downvote--active {
+  color: red;
   display: none;
 }
 .vote__number_upvotes {
   font-size: 1.7rem;
   font-weight: bold;
   font-family: "Lato";
-  margin-right: 10px;
 }
 .vote__number_downvotes {
   font-size: 1.7rem;
   font-weight: bold;
   font-family: "Lato";
+}
+
+.material-icons.red {
+  color: red;
 }
 
 body {
