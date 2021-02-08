@@ -192,13 +192,11 @@ Array.from(allLinks).forEach((link) => {
     else if (pathName === '/movie-Cards') {
         const content = `
             <h1> Movie Cards </h1>
-            <h2> Explanation </h2>
+            <h2> Erklärung </h2>
             <p> Moviecards, nach BEM Naming Convention. Orientiert sich an Material Design und verwendet
-            mehrere States</p>
+            mehrere States für das Up- bzw. Downvoting.</p>
 
-            <h2> Code </h2>
-
-            <h2> Sample </h2>
+            <h2 class="spacing"> Beispiel </h2>
 
             <div class="container">
             <div class="moviecard">
@@ -266,7 +264,12 @@ Array.from(allLinks).forEach((link) => {
             </div>
     </div>
 
-    <h2>Description </h2>
+    <h2 class="spacing"> Code </h2>
+
+    <iframe height="500" style="width: 100%;" scrolling="no" title="Movie Card" src="https://codepen.io/chris392/embed/dyOXZzm?height=265&theme-id=dark&default-tab=html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+    See the Pen <a href='https://codepen.io/chris392/pen/dyOXZzm'>Movie Card</a> by Chris392
+    (<a href='https://codepen.io/chris392'>@chris392</a>) on <a href='https://codepen.io'>CodePen</a>.
+  </iframe>
 
         `
         
