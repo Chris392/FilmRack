@@ -1,6 +1,6 @@
 
 const allLinks = document.querySelectorAll('a')
-const pageContent = document.getElementById('content')
+const pageContent = document.getElementsByClassName('content')[0]
 
   window.onload = (event) => {
     console.log('reloaded')
@@ -275,7 +275,82 @@ Array.from(allLinks).forEach((link) => {
 
         cardAnimation()
     }
-  }
+    else if (pathName === '/event-cards') {
+        console.log("hey")
+        const content = `
+            <div class="mobile_component">
+                <div class="event">
+                    <div class="event__host">
+                        <img src="./assets/sgratkx3xj731.png" alt="hostpic">
+                    </div>
+                    <div class="event__info">
+                        <h3 class="event__name">Max Movie Night</h3>
+                        <div class="event__detail">
+                            <span class="event__time"> <img src="./assets/schedule-white-18dp.svg" alt="time"> 20:00</span>
+                            <span class="event__date"> <img src="./assets/event-white-18dp.svg" alt="date"> 19.12 </span>
+                        </div>
+                    </div>
+                    <a class="event__arrow">
+                        <img src="./assets/outline_arrow_back_ios_white_18dp.png" alt="arrow">
+                    </a>
+                </div>
+            </div>
+        `
+        
+        pageContent.innerHTML = content
+        console.log(pageContent)
+    }
+    else if (pathName === '/listitem-cards') {
+
+        const content = `
+                <div class="mobile_component">
+                <div class="listcard">
+                    <a href="#" class="listcard__link">
+                        <span class="listcard__rank listcard__rank--first">
+                            1
+                        </span>
+                    </a>
+                </div>
+                <div class="listcard">
+                    <a href="#" class="listcard__link">
+                        <span class="listcard__rank">
+                            2
+                        </span>
+                    </a>
+                </div>
+            </div>
+        `
+        pageContent.innerHTML = content
+        console.log(pageContent)
+    }
+    else if (pathName === '/bottom-nav') {
+
+        const content = `
+                <div class="mobile_component">
+                    <nav class="bottom_nav">
+                        <a href="#" class="bottom_nav__link bottom_nav__link--active">
+                            <i class="material-icons bottom_nav__icon">assessment</i>
+                            <span class="bottom_nav__text bottom_nav__text--active">Ranking</span>
+                        </a>
+                        <a href="#" class="bottom_nav__link">
+                            <i class="material-icons">theaters</i>
+                            <span class="bottom_nav__text">Details</span>
+                        </a>
+                        <a href="#" class="bottom_nav__link">
+                            <i class="material-icons">chat</i>
+                            <span class="bottom_nav__text">Chat</span>
+                        </a>
+                        <a href="#" class="bottom_nav__link">    
+                            <i class="material-icons">assignment</i>
+                            <span class="bottom_nav__text">Organisation</span>
+                        </a>
+                    </nav>
+                </div>
+        `
+        pageContent.innerHTML = content
+        console.log(pageContent)
+    }
+}
 
  
 function cardAnimation(){

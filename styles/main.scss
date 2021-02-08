@@ -1,5 +1,14 @@
-@import 'utils/variables.scss', 'base/reset.scss', 'base/base.scss', 'base/typography.scss', 'layout/sidebar.scss', 'layout/content.scss', 'components/moviecard.scss', 'components/vote.scss';
-
+@import 'utils/variables.scss', 
+'base/reset.scss',
+'base/base.scss',
+'base/typography.scss', 
+'layout/sidebar.scss', 
+'layout/content.scss',
+'components/list_card.scss',
+'components/bottom_nav.scss',
+'components/moviecard.scss',
+'components/vote.scss',
+'components/event_card.scss';
 
 body{
     display: flex;
@@ -7,7 +16,13 @@ body{
     background-color: $base-color;
     font-family: $main-font,$heading-font, sans-serif;
 }
-
+.mobile_component{
+    width: 450px;
+    border-color: white;
+    border: 1px solid;
+    display: flex;
+    flex-direction: row;
+}
 
 
 
