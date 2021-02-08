@@ -204,7 +204,7 @@ Array.from(allLinks).forEach((link) => {
             <div class="moviecard">
                 <h3 class="moviecard__rank">Platz 6</h3>
                 <div class="moviecard__background">
-                    <img class="moviecard__media" src="/Jumpstreet.865355ee.PNG" alt="Movie">
+                    <img class="moviecard__media" src="images/Jumpstreet.PNG" alt="Movie">
                     <div class="moviecard__content">
                         <p class="moviecard__time">1 Std. 49 Min.</p>
                         <h1 class="moviecard__title">21 Jumpstreet</h1>
@@ -236,7 +236,7 @@ Array.from(allLinks).forEach((link) => {
             <div class="moviecard">
                 <h3 class="moviecard__rank">Platz 6</h3>
                 <div class="moviecard__background">
-                    <img class="moviecard__media" src="/Jumpstreet.865355ee.PNG" alt="Movie">
+                    <img class="moviecard__media" src="images/Jumpstreet.PNG" alt="Movie">
                     <div class="moviecard__content">
                         <p class="moviecard__time">1 Std. 49 Min.</p>
                         <h1 class="moviecard__title">21 Jumpstreet</h1>
