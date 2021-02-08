@@ -114,6 +114,7 @@ p {
   width: 80%;
   background-color: #121212;
 }
+
 .content h2 {
   margin-top: 15px;
   margin-bottom: 5px;
@@ -123,6 +124,124 @@ p {
   margin-bottom: 5px;
 }
 
+
+.container {
+  margin-top: 20px;
+  width: 450px;
+  margin: auto;
+  border: solid 0.2px grey;
+}
+
+.moviecard {
+  margin-bottom: 100px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+.moviecard__background {
+  background-color: #333333;
+  border-radius: 5px;
+}
+.moviecard__rank {
+  color: white;
+  padding-bottom: 10px;
+}
+.moviecard__media {
+  width: 100%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  cursor: pointer;
+}
+.moviecard__content {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.moviecard__time {
+  text-align: end;
+}
+.moviecard__title {
+  line-height: 1.5;
+}
+.moviecard__data {
+  margin-bottom: 20px;
+}
+.moviecard__short_description {
+  line-height: 1.5;
+}
+.moviecard__short_description--invisible {
+  display: none;
+}
+.moviecard__short_description--visible {
+  display: block;
+}
+.moviecard__long_description {
+  line-height: 1.5;
+}
+.moviecard__extended {
+  overflow: hidden;
+}
+.moviecard__extended--invisible {
+  transition: max-height 0.5s ease-in;
+  max-height: 0px;
+  visibility: hidden;
+}
+.moviecard__extended--visible {
+  max-height: 500px;
+  transition: max-height 0.5s ease-in;
+}
+.moviecard__directors {
+  line-height: 5;
+}
+.moviecard__folder {
+  margin-top: 25px;
+  padding-left: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-top: solid white;
+  border-width: 0.5px;
+  border-end-start-radius: 5px;
+  border-end-end-radius: 5px;
+  cursor: pointer;
+}
+
+.vote {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 150px;
+  margin-top: 20px;
+}
+.vote .material-icons {
+  font-size: 2.5rem;
+}
+.vote__upvote {
+  cursor: pointer;
+}
+.vote__upvote--active {
+  color: red;
+  display: none;
+}
+.vote__downvote {
+  padding-top: 16px;
+  cursor: pointer;
+}
+.vote__downvote--active {
+  color: red;
+  display: none;
+}
+.vote__number_upvotes {
+  font-size: 1.7rem;
+  font-weight: bold;
+  font-family: "Lato";
+}
+.vote__number_downvotes {
+  font-size: 1.7rem;
+  font-weight: bold;
+  font-family: "Lato";
+}
+
+.material-icons.red {
+  color: red;
+  
 .listcard {
   margin: 3%;
   width: 25%;

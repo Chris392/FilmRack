@@ -1,0 +1,102 @@
+.container{
+    margin-top: 20px;
+    width: 450px;
+    margin: auto;
+    border: solid 0.2px grey;
+}
+
+.moviecard{
+
+    margin-bottom: 100px;
+    margin-right: 5px;
+    margin-left: 5px;
+
+    &__background{
+    background-color: $dark-grey;
+    border-radius: 5px;
+    }
+
+    &__rank{
+        color: white;
+        padding-bottom: 10px;
+    }
+
+    &__media{
+        width: 100%;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        cursor: pointer;
+    }
+
+
+    &__content{
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    &__time{
+        text-align: end;
+    }
+
+    &__title{
+        line-height: 1.5;
+    }
+
+    &__data{
+        margin-bottom: 20px;
+    }
+
+    &__short_description{
+        line-height: 1.5;
+
+        &--invisible{
+            display: none;
+        }
+
+        &--visible{
+            display: block;
+        }
+    }
+
+    &__long_description{
+        line-height: 1.5;   
+    }
+
+    &__extended{
+        overflow: hidden;
+
+        &--invisible{
+            transition: max-height 0.5s ease-in;
+            max-height: 0px;
+            visibility: hidden;
+        }
+        
+
+        &--visible{
+            max-height: 500px;
+            transition: max-height 0.5s ease-in;
+        }
+    }
+
+    &__directors{
+        line-height: 5;
+    }
+
+
+
+    &__folder{
+        margin-top: 25px;
+        padding-left: 15px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        border-top: solid white;
+        border-width: 0.5px;
+        border-end-start-radius: 5px;
+        border-end-end-radius: 5px;
+        cursor: pointer;
+    }
+
+
+
+    
+}

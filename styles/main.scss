@@ -6,12 +6,14 @@
 'layout/content.scss',
 'components/list_card.scss',
 'components/bottom_nav.scss',
+'components/moviecard.scss',
+'components/vote.scss',
 'components/event_card.scss';
 
 body{
     display: flex;
     color: white;
-    background-color: $dark-grey;
+    background-color: $base-color;
     font-family: $main-font,$heading-font, sans-serif;
 }
 .mobile_component{
@@ -21,6 +23,7 @@ body{
     display: flex;
     flex-direction: row;
 }
+
 
 
 

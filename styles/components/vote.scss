@@ -1,0 +1,47 @@
+.vote{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 150px;
+    margin-top: 20px;
+
+    .material-icons{
+        font-size: 2.5rem;
+    }
+
+    &__upvote{
+        cursor: pointer;
+
+        &--active{
+            color: red;
+            display: none;
+        }
+    }
+
+    &__downvote{
+        padding-top: 16px;
+        cursor: pointer;
+
+        &--active{
+            color: red;
+            display: none;
+        }
+    }
+
+    &__number_upvotes{
+        font-size: 1.7rem;
+        font-weight: bold;
+        font-family: $heading-font;
+    }
+
+    &__number_downvotes{
+        font-size: 1.7rem;
+        font-weight: bold;
+        font-family: $heading-font;
+    }
+}
+
+.material-icons.red{
+    color: red;
+}

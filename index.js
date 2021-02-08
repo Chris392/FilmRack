@@ -192,10 +192,88 @@ Array.from(allLinks).forEach((link) => {
     else if (pathName === '/movie-Cards') {
         const content = `
             <h1> Movie Cards </h1>
+            <h2> Explanation </h2>
+            <p> Moviecards, nach BEM Naming Convention. Orientiert sich an Material Design und verwendet
+            mehrere States</p>
+
+            <h2> Code </h2>
+
+            <h2> Sample </h2>
+
+            <div class="container">
+            <div class="moviecard">
+                <h3 class="moviecard__rank">Platz 6</h3>
+                <div class="moviecard__background">
+                    <img class="moviecard__media" src="/Jumpstreet.865355ee.PNG" alt="Movie">
+                    <div class="moviecard__content">
+                        <p class="moviecard__time">1 Std. 49 Min.</p>
+                        <h1 class="moviecard__title">21 Jumpstreet</h1>
+                        <p class="moviecard__data">2012 FSK-12 Action-Comedy-Crime</p>
+                        <p class="moviecard__short_description moviecard__shortdescription--visible">A pair of underachieving cops are sent back to a local high school
+                        to blend in. </p> 
+                        <div class="moviecard__extended moviecard__extended--invisible">
+                            <p class="moviecard__long_description">A pair of underachieving cops are sent back to a 
+                            local high school to blend in and bring down a synthetic drug ring. 
+                            The pair plays police officers who must go undercover in a high school to bust a drug ring, just like Johnny Depp in the original series.
+                            </p><p class="moviecard__directors">Directors: Phil Lord, Christopher Miller</p>
+                            <p class="moviecard__actors">Actors: Jonah Hill, Channing Tatum, Brie Larson </p>
+                        </div>
+                        <div class="vote">
+                            <span class="material-icons vote__upvote vote__upvote">
+                            thumb_up_off_alt
+                            </span>
+                            <p class="vote__number_upvotes">4</p>
+                            <span class="material-icons vote__downvote">
+                            thumb_down_off_alt
+                            </span>
+                            <p class="vote__number_downvotes">10</p>
+                        </div>
+                    </div>
+                    <div class="moviecard__folder moviecard__folder--upfolded">AUSKLAPPEN</div>
+                </div>
+            </div>
+
+            <div class="moviecard">
+                <h3 class="moviecard__rank">Platz 6</h3>
+                <div class="moviecard__background">
+                    <img class="moviecard__media" src="/Jumpstreet.865355ee.PNG" alt="Movie">
+                    <div class="moviecard__content">
+                        <p class="moviecard__time">1 Std. 49 Min.</p>
+                        <h1 class="moviecard__title">21 Jumpstreet</h1>
+                        <p class="moviecard__data">2012 FSK-12 Action-Comedy-Crime</p>
+                        <p class="moviecard__short_description moviecard__shortdescription--visible">A pair of underachieving cops are sent back to a local high school
+                        to blend in. </p> 
+                        <div class="moviecard__extended moviecard__extended--invisible">
+                            <p class="moviecard__long_description">A pair of underachieving cops are sent back to a 
+                            local high school to blend in and bring down a synthetic drug ring. 
+                            The pair plays police officers who must go undercover in a high school to bust a drug ring, just like Johnny Depp in the original series.
+                            </p><p class="moviecard__directors">Directors: Phil Lord, Christopher Miller</p>
+                            <p class="moviecard__actors">Actors: Jonah Hill, Channing Tatum, Brie Larson </p>
+                        </div>
+                        <div class="vote">
+                            <span class="material-icons vote__upvote">
+                            thumb_up_off_alt
+                            </span>
+                            <p class="vote__number_upvotes">4</p>
+                            <span class="material-icons vote__downvote">
+                            thumb_down_off_alt
+                            </span>
+                            <p class="vote__number_downvotes">10</p>
+                        </div>
+                    </div>
+                    <div class="moviecard__folder moviecard__folder--upfolded">AUSKLAPPEN</div>
+                </div>
+            </div>
+    </div>
+
+    <h2>Description </h2>
+
         `
         
         pageContent.innerHTML = content
         console.log(pageContent)
+
+        cardAnimation()
     }
     else if (pathName === '/event-cards') {
         console.log("hey")
@@ -274,4 +352,153 @@ Array.from(allLinks).forEach((link) => {
     }
 }
 
-  
+ 
+function cardAnimation(){
+
+//Script for the movie-card & Up-Down Votes
+
+const card = document.getElementsByClassName('moviecard__folder')
+const shortDescription = document.getElementsByClassName('moviecard__short_description')
+const extended = document.getElementsByClassName('moviecard__extended')
+const actors = document.getElementsByClassName('moviecard__actors')
+
+const upvote = document.getElementsByClassName('vote__upvote')
+const downvote = document.getElementsByClassName('vote__downvote')
+
+const upvoteNumber = document.getElementsByClassName('vote__number_upvotes')
+const downvoteNumber = document.getElementsByClassName('vote__number_downvotes')
+
+
+let state = "neutral";
+
+console.log(shortDescription)
+
+for (let i = 0; i < card.length; i++){
+    let count = i;
+    //Die Anzahl der Aktuellen Up- und Downvotes wird gespeichert
+    let currentUpvotes = upvoteNumber[count].innerHTML
+    let currentDownvotes = downvoteNumber[count].innerHTML
+
+    card[count].addEventListener("click", () => {
+
+        if(card[count].innerHTML === "AUSKLAPPEN"){
+        
+        shortDescription[count].classList.remove("moviecard__short_description--visible")
+        shortDescription[count].classList.add("moviecard__short_description--invisible")
+
+
+        extended[count].classList.remove("moviecard__extended--invisible")
+        extended[count].classList.add("moviecard__extended--visible")
+        
+
+        actors[count].style.display = "block"
+
+        card[count].innerHTML = "EINKLAPPEN"
+
+        }else{
+
+        shortDescription[count].classList.add("moviecard__short_description--visible")
+        shortDescription[count].classList.remove("moviecard__short_description--invisible")
+
+        extended[count].classList.add("moviecard__extended--invisible")
+        extended[count].classList.remove("moviecard__extended--visible")
+
+        card[count].innerHTML = "AUSKLAPPEN"
+
+        actors[count].style.display = "none"
+
+        }
+    })
+
+    //Wenn Upvote geklickt wird...
+    upvote[count].addEventListener("click", () => {
+
+
+        // ... und der State liked ist:
+        // ... wird upvote auf inaktive gesetzt
+        if(state === "upvoted"){
+            upvote[count].classList.remove('vote__upvote--active')
+
+            state = "neutral"
+        }
+
+        // ... und der State neutral ist:
+        // ... wird upvote auf active gesetzt und der state auf liked:
+        else if(state === "neutral"){
+            upvote[count].classList.add('vote__upvote--active')
+
+            state = "upvoted"
+        }
+
+        // ... und der State downvoted ist:
+        // ... wird upvote auf active und downvote auf inactive und der state auf upvoted gesetzt
+        else if(state === "downvoted"){
+            upvote[count].classList.add('vote__upvote--active')
+            downvote[count].classList.remove('vote__downvote--active')
+
+            state = "upvoted"
+        }
+
+        changeNumbers()
+    })
+
+
+    //Wenn Downvote geklickt wird...
+    downvote[count].addEventListener("click", () => {
+
+        // ... und der State downvoted ist:
+        // ... wird downvoted auf inactive gesetzt
+        if(state === "downvoted"){
+            downvote[count].classList.remove('vote__downvote--active')
+
+            state="neutral"
+        }
+
+
+        // ... und der State neutral ist:
+        // ... wird downvote auf active gesetzt und der state auf downvoted:
+        else if(state === "neutral"){
+            downvote[count].classList.add('vote__downvote--active')
+
+            state="downvoted"
+        }
+
+        // ... und der State upvoted ist:
+        // ... wird downvoted auf active und upvoted auf inactive und der state auf downvoted gesetzt
+        else if(state === "upvoted"){
+            downvote[count].classList.add('vote__downvote--active')
+            upvote[count].classList.remove('vote__upvote--active')
+
+            state="downvoted"
+        }
+
+
+        changeNumbers()
+    })
+
+
+
+    function changeNumbers(){
+
+        if(state === "neutral"){
+            upvoteNumber[count].innerHTML = currentUpvotes
+            downvoteNumber[count].innerHTML = currentDownvotes
+        }
+        else if(state === "upvoted"){
+            let newNr = currentUpvotes   
+            newNr++       
+            upvoteNumber[count].innerHTML = newNr++
+            downvoteNumber[count].innerHTML = currentDownvotes
+            
+        }
+        else if(state === "downvoted"){
+            let newNr = currentDownvotes
+            newNr++
+            upvoteNumber[count].innerHTML = currentUpvotes
+            downvoteNumber[count].innerHTML = newNr
+        }
+    }
+
+}
+
+}
