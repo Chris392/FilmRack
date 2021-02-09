@@ -54,7 +54,7 @@ Array.from(allLinks).forEach((link) => {
 
     else if (pathName === '/farben') {
         const content = `
-            <h1> Farben </h1>
+            <h1 class="spacing"> Farben </h1>
 
             <img src="images/Colors.PNG" alt="Colors">
         `
@@ -67,20 +67,20 @@ Array.from(allLinks).forEach((link) => {
     else if (pathName === '/typographie') {
         const content = `
             <h1> Typographie </h1>
+            <h2 class="brand">Branding</h2>
+            <p>
+                Als Brand-Font wird Monoton verwendet. Die Farbe soll ein bisschen den alten Kino Vibe vermitteln.
+                In SCSS unter $brand-font
+            </p>
             <h2>Überschriften</h2>
             <p>
-                Als überschrift Font wird lato verwendet.
+                Als überschrift Font wird Lato verwendet.
                 In SCSS unter $heading-font
             </p>
-            <h2>Fliestext</h2>
-            <p>
-                Als überschrift Font wird Open Sans verwendet.
+            <h2 class="os">Fließtext</h2>
+            <p class="os">
+                Als Fließtext Font wird Open Sans verwendet. 
                 In SCSS unter $main-font
-            </p>
-            <h2>Überschriften</h2>
-            <p>
-                Als überschrift Font wird Monoton verwendet. Diese Strahlt den alten Kino Vibe aus
-                In SCSS unter $brand-font
             </p>
         `
         
@@ -150,7 +150,27 @@ Array.from(allLinks).forEach((link) => {
 
     else if (pathName === '/ueberschriften') {
         const content = `
-            <h1> Überschriften </h1>
+
+            <h1> Überschriften & Absätze </h1>
+
+            <h2> Erklärung </h2>
+
+            <p> Überschrift mit Fließtext. Kontrast ensteht vor allem durch die Größe der Schrift und den 
+            Unterschieden in der Farbe. Line-Height des Fließtextes ist 1.3 für bessere Lesbarkeit.
+            Max-Width ist auf 800 px gesetzt um übertrieben lange Zeilen zu vermeiden.</p>
+
+            <h2> Beispiel </h2>
+
+            <h2> At vero eos et accusam et justo duo dolores et ea rebum. </h2>
+
+            <p> Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. </p>
+
+            <h2> Code </h2>
+
+            <iframe height="500" style="width: 100%;" scrolling="no" title="ExNyGjQ" src="https://codepen.io/chris392/embed/ExNyGjQ?height=265&theme-id=dark&default-tab=html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+            See the Pen <a href='https://codepen.io/chris392/pen/ExNyGjQ'>ExNyGjQ</a> by Chris392
+            (<a href='https://codepen.io/chris392'>@chris392</a>) on <a href='https://codepen.io'>CodePen</a>.
+          </iframe>
         `
         
         pageContent.innerHTML = content
