@@ -82,6 +82,10 @@ Array.from(allLinks).forEach((link) => {
                 Als Fließtext Font wird Open Sans verwendet. 
                 In SCSS unter $main-font
             </p>
+            <h2 class="os">Icons</h2>
+            <p>
+                Als Icons dient die Material-IO Font. <a href="http://google.github.io/material-design-icons/">Hier</a> mehr zur verwendung.
+            </p>
         `
         
         pageContent.innerHTML = content
@@ -139,7 +143,7 @@ Array.from(allLinks).forEach((link) => {
             <h2>Blöcke</h2>
             <p>Blöcke sind einzelstehende Komponenten</p>
             <h2>Elemente</h2>
-            <p>Elemente sind teile von Bläcken. Als Elemente können einzelne Punke(<li>) von Menüs bezeichnet werden</p>
+            <p>Elemente sind teile von Bläcken. Als Elemente können einzelne Punke(&ltli&gt) von Menüs bezeichnet werden</p>
             <h2>Modifiers</h2>
             <p>Modifiers sind Zustände der Elemente. Man kann diese nutzen, um beispielweise ein element den Zustand "hidden zu geben"</p>
         `
@@ -338,25 +342,35 @@ Array.from(allLinks).forEach((link) => {
         cardAnimation()
     }
     else if (pathName === '/event-cards') {
-        console.log("hey")
         const content = `
+            <h1>Event Card</h1>
+            <h2> Erklärung </h2>
+            <p> Dies ist das beispiel einer Event Card. Sie ist ausgelegt Für Mobile Screens bis 450px Breite. BEM Naming Conventions wurden befolgt, und der Style orinetiert sich an Material Design</p>
+            <h2> Beispiel </h2>
             <div class="mobile_component">
-                <div class="event">
-                    <div class="event__host">
-                        <img src="./assets/sgratkx3xj731.png" alt="hostpic">
-                    </div>
-                    <div class="event__info">
-                        <h3 class="event__name">Max Movie Night</h3>
-                        <div class="event__detail">
-                            <span class="event__time"> <img src="./assets/schedule-white-18dp.svg" alt="time"> 20:00</span>
-                            <span class="event__date"> <img src="./assets/event-white-18dp.svg" alt="date"> 19.12 </span>
-                        </div>
-                    </div>
-                    <a class="event__arrow">
-                        <img src="./assets/outline_arrow_back_ios_white_18dp.png" alt="arrow">
-                    </a>
-                </div>
+            <div class="event">
+            <div class="event__host">
+            <img src="./assets/sgratkx3xj731.png" alt="hostpic">
             </div>
+            <div class="event__info">
+            <h3 class="event__name">Max Movie Night</h3>
+            <div class="event__detail">
+            <span class="event__time"> <img src="./assets/schedule-white-18dp.svg" alt="time"> 20:00</span>
+            <span class="event__date"> <img src="./assets/event-white-18dp.svg" alt="date"> 19.12 </span>
+            </div>
+            </div>
+            <a class="event__arrow">
+            <img src="./assets/outline_arrow_back_ios_white_18dp.png" alt="arrow">
+            </a>
+            </div>
+            </div>
+            <h2 class="spacing"> Code </h2>
+            <iframe height="500" style="width: 80%;" scrolling="no" title="Event Card" src="https://codepen.io/YouckFou46/embed/ExNgjGj" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+            See the Pen <a href='https://codepen.io/YouckFou46/pen/ExNgjGj'>Movie Card</a> by YouckFou46
+            (<a href='https://codepen.io/YouckFou46'>@YouckFou46</a>) on <a href='https://codepen.io'>CodePen</a>.
+          </iframe>
+            
+
         `
         
         pageContent.innerHTML = content
@@ -365,7 +379,11 @@ Array.from(allLinks).forEach((link) => {
     else if (pathName === '/listitem-cards') {
 
         const content = `
-                <div class="mobile_component">
+            <h1>Ranking List Item</h1>
+            <h2> Erklärung </h2>
+            <p> Hier die Karten des Rankings. Diese Besteht aus der Platzierung, Die dynamish angepasst werden muss. Das Erste Child hat die Font Open Sans, die Restlichen Lato. Auch hier wird BEM befolgt und sich an Material-IO orientiert</p>
+            <h2> Beispiel </h2>
+            <div class="mobile_component">
                 <div class="listcard">
                     <a href="#" class="listcard__link">
                         <span class="listcard__rank listcard__rank--first">
@@ -381,6 +399,11 @@ Array.from(allLinks).forEach((link) => {
                     </a>
                 </div>
             </div>
+            <h2 class="spacing"> Code </h2>
+            <iframe height="500" style="width: 80%;" scrolling="no" title="Event Card" src="https://codepen.io/YouckFou46/embed/qBqaONr" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+            See the Pen <a href='https://codepen.io/YouckFou46/pen/qBqaONr'>Movie Card</a> by YouckFou46
+            (<a href='https://codepen.io/YouckFou46'>@YouckFou46</a>) on <a href='https://codepen.io'>CodePen</a>.
+            </iframe>
         `
         pageContent.innerHTML = content
         console.log(pageContent)
@@ -388,6 +411,10 @@ Array.from(allLinks).forEach((link) => {
     else if (pathName === '/bottom-nav') {
 
         const content = `
+                <h1>Bottom Navigation</h1>
+                <h2> Erklärung </h2>
+                <p> Eine fixierte Navigation welche mittels Bottom-Padding von Baody erziehlt wird. Auch hier wird BEM befolgt und MaterialIo Icons verwendet.</p>
+                <h2> Beispiel </h2>
                 <div class="mobile_component">
                     <nav class="bottom_nav">
                         <a href="#" class="bottom_nav__link bottom_nav__link--active">
@@ -408,6 +435,11 @@ Array.from(allLinks).forEach((link) => {
                         </a>
                     </nav>
                 </div>
+                <h2 class="spacing"> Code </h2>
+                <iframe height="500" style="width: 80%;" scrolling="no" title="Event Card" src="https://codepen.io/YouckFou46/embed/JjbRYYb" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                See the Pen <a href='https://codepen.io/YouckFou46/pen/JjbRYYb'>Movie Card</a> by YouckFou46
+                (<a href='https://codepen.io/YouckFou46'>@YouckFou46</a>) on <a href='https://codepen.io'>CodePen</a>.
+                </iframe>
         `
         pageContent.innerHTML = content
         console.log(pageContent)
