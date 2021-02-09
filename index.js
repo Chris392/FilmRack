@@ -150,7 +150,27 @@ Array.from(allLinks).forEach((link) => {
 
     else if (pathName === '/ueberschriften') {
         const content = `
-            <h1> Überschriften </h1>
+
+            <h1> Überschriften & Absätze </h1>
+
+            <h2> Erklärung </h2>
+
+            <p> Überschrift mit Fließtext. Kontrast ensteht vor allem durch die Größe der Schrift und den 
+            Unterschieden in der Farbe. Line-Height des Fließtextes ist 1.3 für bessere Lesbarkeit.
+            Max-Width ist auf 800 px gesetzt um übertrieben lange Zeilen zu vermeiden.</p>
+
+            <h2> Beispiel </h2>
+
+            <h2> At vero eos et accusam et justo duo dolores et ea rebum. </h2>
+
+            <p> Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. </p>
+
+            <h2> Code </h2>
+
+            <iframe height="500" style="width: 100%;" scrolling="no" title="ExNyGjQ" src="https://codepen.io/chris392/embed/ExNyGjQ?height=265&theme-id=dark&default-tab=html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+            See the Pen <a href='https://codepen.io/chris392/pen/ExNyGjQ'>ExNyGjQ</a> by Chris392
+            (<a href='https://codepen.io/chris392'>@chris392</a>) on <a href='https://codepen.io'>CodePen</a>.
+          </iframe>
         `
         
         pageContent.innerHTML = content
