@@ -316,6 +316,104 @@ p {
   color: red;
 }
 
+#grid {
+  display: grid;
+  grid-template-columns: 200px repeat(5, 1fr);
+  grid-template-rows: 50px repeat(3, 100px);
+  margin: 100px;
+  max-width: 1300px;
+  min-width: 1000px;
+}
+
+.btn {
+  cursor: pointer;
+  background-color: #121212;
+  font-family: "Open Sans";
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  padding: 0.5rem 2rem 0.5rem 2rem;
+  border: solid white 3px;
+  border-radius: 5px;
+  transition: border 0.4s ease-in-out;
+}
+
+a {
+  text-align: center;
+}
+
+.btn:hover {
+  background-color: #B91900;
+  color: white;
+  animation: pulse 1s;
+  box-shadow: 0.5em 0.35em 0.25em 0 black;
+}
+
+.btn--hover {
+  background-color: #B91900;
+  color: white;
+  box-shadow: 0.5em 0.35em 0.25em 0 black;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0.25em 0.15em 0.1em 0.8em black;
+  }
+  5% {
+    color: white;
+  }
+}
+.btn:focus {
+  background-color: #121212;
+  border-color: #B91900;
+  color: white;
+}
+
+.btn--active {
+  background-color: #121212;
+  border-color: #B91900;
+  color: white;
+}
+
+.btn:disabled {
+  background-color: #121212;
+  color: #707070;
+  cursor: inherit;
+  box-shadow: none;
+  animation: none;
+  opacity: 0.75;
+}
+
+.btn--disabled {
+  color: #707070;
+  background-color: #121212;
+  opacity: 0.75;
+  box-shadow: none;
+  animation: none;
+  pointer-events: none;
+}
+
+.btn--loading {
+  color: white;
+  box-shadow: none;
+  animation: loading 3s alternate infinite;
+  border-color: #121212;
+  cursor: inherit;
+  background: linear-gradient(270deg, orange, orangered);
+  background-position: 0 33%;
+  background-size: 200% 200%;
+}
+
+@keyframes loading {
+  50% {
+    background-position: 34% 66%;
+    border-color: white;
+    color: #121212;
+  }
+  100% {
+    background-position: 67% 100%;
+  }
+}
 .event {
   margin-top: 15px;
   margin-bottom: 15px;
