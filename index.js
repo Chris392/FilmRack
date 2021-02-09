@@ -143,7 +143,7 @@ Array.from(allLinks).forEach((link) => {
             <h2>Blöcke</h2>
             <p>Blöcke sind einzelstehende Komponenten</p>
             <h2>Elemente</h2>
-            <p>Elemente sind teile von Bläcken. Als Elemente können einzelne Punke(<li>) von Menüs bezeichnet werden</p>
+            <p>Elemente sind teile von Bläcken. Als Elemente können einzelne Punke(&ltli&gt) von Menüs bezeichnet werden</p>
             <h2>Modifiers</h2>
             <p>Modifiers sind Zustände der Elemente. Man kann diese nutzen, um beispielweise ein element den Zustand "hidden zu geben"</p>
         `
