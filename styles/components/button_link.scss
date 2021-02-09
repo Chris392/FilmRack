@@ -1,0 +1,103 @@
+// for visual appearence reasons
+
+  
+  #grid{
+    display: grid;
+    grid-template-columns: 200px repeat(5, 1fr);
+    grid-template-rows: 50px repeat(3, 100px);
+    margin: 100px;
+    max-width: 1300px;
+    min-width: 1000px;
+  }
+  
+  
+  // Style a visually appealing button component with the following requirements:
+  
+  // The button has a default style,
+  .btn {
+     
+    // styling
+    cursor: pointer;
+    background-color: $base-color; 
+    font-family: $main-font;
+    font-size: 1rem;
+    font-weight: bold;
+    color: $font;
+    padding: 0.5rem 2rem 0.5rem 2rem;
+    border: solid white 3px;
+    border-radius: 5px;
+    
+    transition: border 0.4s ease-in-out;
+  }
+  
+  a{
+    text-align: center;
+  }
+  
+  // a hover style,
+  .btn:hover{
+    background-color: $akzent;
+    color: white;
+    animation: pulse 1s;
+    box-shadow: 0.5em 0.35em 0.25em 0 rgba(black,1);
+  }
+  
+   .btn--hover{
+        background-color: $akzent;
+        color: white;
+        box-shadow: 0.5em 0.35em 0.25em 0 rgba(black,1);
+   }
+  
+  @keyframes pulse {
+    //75% { box-shadow: 0.4em   0.175em 0.2em   0       black; }
+    //50% { box-shadow: 0.3em   0.1em   0.10em  0.45em  orange; }
+    //25% { box-shadow: 0.25em  0.05em  0.05em  0.5em   orange; }
+    0%  { box-shadow: 0.25em 0.15em 0.1em 0.8em black; }
+    5% { color: white; }
+  }
+  // a focus style,
+  .btn:focus{
+    background-color: $base-color;
+    border-color: $akzent;
+    color: white;
+  }
+  
+  .btn--active{
+    background-color: $base-color;
+    border-color: $akzent;
+    color: white; 
+  }
+  // a disabled style,
+  .btn:disabled{
+    background-color: $base-color;
+    color: $light-grey;
+    cursor: inherit;
+    box-shadow: none;
+    animation: none;
+    opacity: 0.75;
+  }
+  .btn--disabled {
+    color: $light-grey;
+    background-color: $base-color;
+    opacity: 0.75;
+    box-shadow: none;
+    animation: none;
+    pointer-events: none;
+  }
+  // a loading style
+    .btn--loading{
+      color: white;
+      box-shadow: none;
+      animation: loading 3s alternate infinite;
+      border-color: $base-color;
+      cursor: inherit;
+      background: linear-gradient(270deg, orange, orangered);
+      background-position: 0 33%;
+      background-size: 200% 200%;
+  }
+  @keyframes loading {
+    50% { background-position: 34% 66%;
+          border-color: white ;
+          color: $base-color }
+    100% { background-position: 67% 100%;}
+  }

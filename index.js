@@ -178,9 +178,49 @@ Array.from(allLinks).forEach((link) => {
     }
 
 
-    else if (pathName === '/navigation') {
+    else if (pathName === '/button') {
         const content = `
-            <h1> Navigation </h1>
+            <h1> Buttons </h1>
+            <h2> Erklärung </h2>
+            <p> Buttons/Input & Link Elements in 5 unterschiedlichen Zuständen anhand unserer Design-Richtlinien.</p>
+            
+            <h2 class="spacing"> Beispiel </h2>
+            <div id="grid">
+                <p></p>
+                <p>Normal</p>
+                <p>Hover</p>
+                <p>Active</p>
+                <p>Loads</p>
+                <p>Disabled</p>
+                
+                <p>Button Elements</p>
+                <div><button type="button" class="btn">Sign Up</button></div>
+                <div><button type="button" class="btn btn--hover">Sign Up</button></div>
+                <div><button type="button" class="btn btn--active">Sign Up</button></div>
+                <div><button type="button" class="btn btn--loading">Sign Up</button></div>
+                <div><button type="button" class="btn btn" disabled>Sign Up</button></div>
+                
+                <p>Input Elements</p>
+                <div><input type="button" class="btn" value="Sign Up"></div>
+                <div><input type="button" class="btn btn--hover" value="Sign Up"></div>
+                <div><input type="button" class="btn btn--active" value="Sign Up"></div>
+                <div><input type="button" class="btn btn--loading" value="Sign Up"></div>
+                <div><input type="button" class="btn btn--disabled" value="Sign Up"></div>
+                
+                <p>Link Elements</p>
+                <div><a href="#" class="btn">Sign Up</a></div>
+                <div><a href="#" class="btn btn--hover">Sign Up</a></div>
+                <div><a href="#" class="btn btn--active">Sign Up</a></div>
+                <div><a href="#" class="btn btn--loading">Sign Up</a></div>
+                <div><a href="#" class="btn btn--disabled">Sign Up</a></div>
+                </div>
+
+                <h2 class="spacing"> Code </h2>
+
+                <iframe height="500" style="width: 100%;" scrolling="no" title="Button Component - Styleguide" src="https://codepen.io/chris392/embed/vYXyyvM?height=265&theme-id=dark&default-tab=html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/chris392/pen/vYXyyvM'>Button Component - Styleguide</a> by Chris392
+  (<a href='https://codepen.io/chris392'>@chris392</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
         `
         
         pageContent.innerHTML = content
@@ -200,6 +240,7 @@ Array.from(allLinks).forEach((link) => {
     else if (pathName === '/buttons') {
         const content = `
             <h1> Buttons </h1>
+
         `
         
         pageContent.innerHTML = content
