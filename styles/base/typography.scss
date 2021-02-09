@@ -14,7 +14,7 @@ h2{
     font-family: $heading-font;
 }
 
-h2.spacing{
+.spacing{
     margin-top: 40px !important;
     margin-bottom: 50px !important;
 }
@@ -35,4 +35,7 @@ h4{
 p{
     font-family: $main-font;
     color: white;
+}
+.os{
+    font-family: $main-font;
 }

@@ -54,7 +54,7 @@ Array.from(allLinks).forEach((link) => {
 
     else if (pathName === '/farben') {
         const content = `
-            <h1> Farben </h1>
+            <h1 class="spacing"> Farben </h1>
 
             <img src="images/Colors.PNG" alt="Colors">
         `
@@ -67,20 +67,20 @@ Array.from(allLinks).forEach((link) => {
     else if (pathName === '/typographie') {
         const content = `
             <h1> Typographie </h1>
+            <h2 class="brand">Branding</h2>
+            <p>
+                Als Brand-Font wird Monoton verwendet. Die Farbe soll ein bisschen den alten Kino Vibe vermitteln.
+                In SCSS unter $brand-font
+            </p>
             <h2>Überschriften</h2>
             <p>
-                Als überschrift Font wird lato verwendet.
+                Als überschrift Font wird Lato verwendet.
                 In SCSS unter $heading-font
             </p>
-            <h2>Fliestext</h2>
-            <p>
-                Als überschrift Font wird Open Sans verwendet.
+            <h2 class="os">Fließtext</h2>
+            <p class="os">
+                Als Fließtext Font wird Open Sans verwendet. 
                 In SCSS unter $main-font
-            </p>
-            <h2>Überschriften</h2>
-            <p>
-                Als überschrift Font wird Monoton verwendet. Diese Strahlt den alten Kino Vibe aus
-                In SCSS unter $brand-font
             </p>
         `
         
