@@ -18,7 +18,7 @@ const pageContent = document.getElementsByClassName('content')[0]
 Array.from(allLinks).forEach((link) => {
     link.addEventListener('click', (evt) => {
       evt.preventDefault()
-      history.pushState(null, 'Quiz', evt.target.href)
+      history.pushState(null, 'Style', evt.target.href)
       onRouteChange()
     })
   })
@@ -55,10 +55,8 @@ Array.from(allLinks).forEach((link) => {
     else if (pathName === '/farben') {
         const content = `
             <h1> Farben </h1>
-            <p>
-            <span>
-            </span>
-            </p>
+
+            <img src="images/Colors.PNG" alt="Colors">
         `
         
         pageContent.innerHTML = content
@@ -352,6 +350,11 @@ Array.from(allLinks).forEach((link) => {
         `
         pageContent.innerHTML = content
         console.log(pageContent)
+    }
+
+    else if(pathName === '/') {
+        history.pushState(null, 'Style', '/einleitung')
+        onRouteChange()
     }
 }
 
